@@ -27,41 +27,45 @@ function AimandScope() {
                         <h1 className="text-center w-fit mx-auto rounded-full font-semibold lg:text-3xl text-xl bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
                             Vision
                         </h1>
-                        <div className='flex flex-col gap-3 justify-center'>
-                            <h2 className='md:text-xl font-semibold'>Artificial Intelligence and Machine Learning for Development </h2>
-                            <ul className='list-disc ml-8 md:text-lg text-sm'>
-                                <li>   Predictive analytics for healthcare, education, agriculture  </li>
-                                <li>AI for decision-making in policy and governance</li>
-                                <li>Ethics and fairness in AI for underserved populations</li>
-                            </ul>
-                        </div>
-                        <div className='flex flex-col gap-3'>
-                            <h2 className='md:text-xl font-semibold'>Smart Cities and Urban Transformation </h2>
-                            <ul className='list-disc ml-8 md:text-lg text-sm'>
-                                <li> Intelligent transportation and mobility
-                                </li>
-                                <li>Urban sustainability through IoT and automation</li>
-                                <li>Data-driven governance and smart infrastructure</li>
-                            </ul>
-                        </div>
-                        <div className='flex flex-col gap-3'>
-                            <h2 className='md:text-xl font-semibold'>Sustainable and Green Technologies </h2>
-                            <ul className='list-disc ml-8 md:text-lg text-sm'>
-                                <li>Renewable energy systems and smart grids
-                                </li>
-                                <li>Circular economy models and eco-innovation</li>
-                                <li>Low-carbon solutions and climate resilience tools</li>
-                            </ul>
-                        </div>
-                        <div className='flex flex-col gap-3'>
-                            <h2 className='md:text-xl font-semibold'>Internet of Things (IoT) and Embedded Systems </h2>
-                            <ul className='list-disc ml-8 md:text-lg text-sm'>
-                                <li>IoT for agriculture, water management, and disaster response
-                                </li>
-                                <li>Smart devices in healthcare and home automation</li>
-                                <li>Sensor networks for real-time monitoring
-                                </li>
-                            </ul>
+                        <div className='grid md:grid-cols-2 gap-7'>
+
+                            <div className='flex flex-col gap-3 justify-center'>
+                                <h2 className='md:text-xl font-semibold bg-gradient-to-r from-[#2487DB] to-[#014BBD]  text-white  md:p-2 p-3 rounded-md'>Artificial Intelligence and Machine Learning for Development </h2>
+                                <ul className='list-disc ml-8 md:text-lg text-sm'>
+                                    <li> <i class="fi fi-sc-wifi-1"></i>  Predictive analytics for healthcare, education, agriculture  </li>
+                                    <li>AI for decision-making in policy and governance</li>
+                                    <li>Ethics and fairness in AI for underserved populations</li>
+                                </ul>
+                            </div>
+                            <div className='flex flex-col gap-3'>
+                                <h2 className='md:text-xl font-semibold bg-gradient-to-r from-[#2487DB] to-[#014BBD]  text-white  md:p-2 p-3 rounded-md'>Smart Cities and Urban Transformation </h2>
+                                <ul className='list-disc ml-8 md:text-lg text-sm'>
+                                    <li> Intelligent transportation and mobility
+                                    </li>
+                                    <li>Urban sustainability through IoT and automation</li>
+                                    <li>Data-driven governance and smart infrastructure</li>
+                                </ul>
+                            </div>
+                            <div className='flex flex-col gap-3'>
+                                <h2 className='md:text-xl font-semibold bg-gradient-to-r from-[#2487DB] to-[#014BBD]  text-white  md:p-2 p-3 rounded-md'>Sustainable and Green Technologies </h2>
+                                <ul className='list-disc ml-8 md:text-lg text-sm'>
+                                    <li>Renewable energy systems and smart grids
+                                    </li>
+                                    <li>Circular economy models and eco-innovation</li>
+                                    <li>Low-carbon solutions and climate resilience tools</li>
+                                </ul>
+                            </div>
+                            <div className='flex flex-col gap-3'>
+                                <h2 className='md:text-xl font-semibold bg-gradient-to-r from-[#2487DB] to-[#014BBD]  text-white  md:p-2 p-3 rounded-md'>Internet of Things (IoT) and Embedded Systems </h2>
+                                <ul className='list-disc ml-8 md:text-lg text-sm'>
+                                    <li>IoT for agriculture, water management, and disaster response
+                                    </li>
+                                    <li>Smart devices in healthcare and home automation</li>
+                                    <li>Sensor networks for real-time monitoring
+                                    </li>
+                                </ul>
+                            </div>
+
                         </div>
                     </div>
                 </section>

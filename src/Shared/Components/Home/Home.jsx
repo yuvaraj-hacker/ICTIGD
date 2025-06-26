@@ -241,7 +241,7 @@ export const Home = () => {
                 Reach Us
               </h1>
               <div className=" w-full">
-                <form onSubmit={handleSubmit} className="w-full grid lg:grid-cols-2 gap-5 bg-[#1B1F3B] p-5 rounded-xl"   ngNativeValidate>
+                <form onSubmit={handleSubmit} className="w-full grid lg:grid-cols-2 gap-5 bg-[#1B1F3B] p-5 rounded-xl" ngNativeValidate>
                   <div className="">
                     <label for="email" className="block mb-2 text-sm mt-4 ">
                       Name
