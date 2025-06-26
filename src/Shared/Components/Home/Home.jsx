@@ -216,7 +216,7 @@ export const Home = () => {
           </section>
           <section className="  max-w-[80rem]  mx-auto  ">
             <div className="  flex flex-col md:gap-7 gap-3">
-              <h1 className="text-center w-fit mx-auto   font-semibold lg:text-3xl text-xl bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
+              <h1 className="text-center w-fit mx-auto  font-semibold lg:text-3xl text-xl bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
                 Key Dates
               </h1>
               {/* <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-10 gap-5">
@@ -224,12 +224,14 @@ export const Home = () => {
                   <KeyDates key={index} Dates={item.Dates} Title={item.Title} />
                 ))}
               </div> */}
-              <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-10 gap-5  ">
-                {date.map((item, index) => (
-                  <div key={index} className="border border-[#2487DB] w-full h-full flex items-center rounded-2xl shadow-md p-5 hover:shadow-xl transition duration-300 bg-white/80 backdrop-blur-sm"  >
-                    <KeyDates Dates={item.Dates} Title={item.Title} />
-                  </div>
-                ))}
+              <div className="p-5 bg-gradient-to-tr shadow-lg   from-[#f0f4ff] to-[#e2ecfc] rounded-xl">
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-10 gap-5  ">
+                  {date.map((item, index) => (
+                    <div key={index} className="  w-full h-full flex items-center rounded-2xl   p-5 hover:shadow-xl transition duration-300 bg-white/80 backdrop-blur-sm"  >
+                      <KeyDates Dates={item.Dates} Title={item.Title} />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </section>
@@ -239,7 +241,7 @@ export const Home = () => {
                 Reach Us
               </h1>
               <div className=" w-full">
-                <form onSubmit={handleSubmit} className="w-full grid lg:grid-cols-2 gap-5 bg-[#1B1F3B] p-5" style={{ clipPath: 'polygon(0 0, calc(100% - 60px) 0, 100% 60px, 100% 100%, 60px 100%, 0 calc(100% - 60px))' }} ngNativeValidate>
+                <form onSubmit={handleSubmit} className="w-full grid lg:grid-cols-2 gap-5 bg-[#1B1F3B] p-5 rounded-xl"   ngNativeValidate>
                   <div className="">
                     <label for="email" className="block mb-2 text-sm mt-4 ">
                       Name
