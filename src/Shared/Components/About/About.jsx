@@ -12,7 +12,6 @@ function About() {
     "Students and Innovators",
     "Technology Consultants",
   ];
-
   return (
     <>
       <Other Title="About the Conference" />
