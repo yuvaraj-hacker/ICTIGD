@@ -7,7 +7,7 @@ function Publication() {
     return (
         <>
             <Other Title="Key Dates and Registration Details" />
-            <section className="flex flex-col md:gap-10 gap-5   max-w-[80rem] py-5 md:py-10  mx-auto xl:px-0 px-3">
+            <section className="flex flex-col md:gap-10 gap-5   max-w-[80rem] py-5 md:py-10  mx-auto 2xl:px-0 px-3">
                 <div className=''>
                     <div className='flex items-center md:mb-5 mb-3 gap-4  text-center  mx-auto justify-center text-[#014BBD]'>
                         <i class="fi fi-rs-calendar-clock flex items-center text-xl"></i>

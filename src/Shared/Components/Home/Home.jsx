@@ -153,7 +153,7 @@ export const Home = () => {
                   </div>
                 </div>
                 <div className="lg:ml-auto mx-auto flex flex-col gap-6">
-                  <h1 className="text-3xl xl:text-5xl lg:text-4xl font-bold leading-snug  md:text-left text-center text-white">
+                  <h1 className="text-3xl 2xl:text-5xl lg:text-4xl font-bold leading-snug  md:text-left text-center text-white">
                     International Conference on Technology Integration for Global Development
                   </h1>
                   <div className=" md:mx-0 mx-auto">
@@ -218,7 +218,7 @@ export const Home = () => {
             <div className="  flex flex-col md:gap-7 gap-3">
               <h1 className="text-center w-fit mx-auto   font-semibold lg:text-3xl text-xl bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
                 Key Dates
-                </h1>
+              </h1>
               {/* <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-10 gap-5">
                 {date.map((item, index) => (
                   <KeyDates key={index} Dates={item.Dates} Title={item.Title} />
@@ -267,17 +267,13 @@ export const Home = () => {
                     <label for="message" className="block mb-2 text-sm ">
                       Your Message
                     </label>
-                    <textarea id="message" name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      ngModel
+                    <textarea id="message" name="message" value={formData.message} onChange={handleChange} ngModel
                       rows="4"
                       className="block p-2.5 w-full text-sm shadow-sm border bg-white text-black rounded-md border-gray-300   focus:ring-primary-500 focus:border-primary-500   mt-4 "
-                      placeholder="Leave a Message..."
-                    ></textarea>
+                      placeholder="Leave a Message..." ></textarea>
                   </div>
-                  <div className="text-center md:mt-0 mt-5  lg:col-span-2">
-                     <button type="submit" className="py-3 px-6 text-sm  font-semibold rounded-full text-center  hover:scale-95 duration-300 shadow-xl   bg-white  text-[#014BBD]  cursor-pointer     " >
+                  <div className="text-center md:mt-0 mt-5 lg:col-span-2">
+                    <button type="submit" className="py-3 px-6 text-sm  font-semibold rounded-full text-center  hover:scale-95 duration-300 shadow-xl   bg-white  text-[#014BBD]  cursor-pointer     " >
                       {status === 'Sending...' ? 'Submitting...' : 'Send message'}
                     </button>
                   </div>

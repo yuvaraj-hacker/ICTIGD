@@ -7,7 +7,7 @@ function PeerReview() {
     return (
         <>
             <Other Title="Conference Tracks" />
-            <section className="flex flex-col md:gap-5 gap-3 max-w-[80rem] py-5 md:py-10  mx-auto xl:px-0 px-3">
+            <section className="flex flex-col md:gap-5 gap-3 max-w-[80rem] py-5 md:py-10  mx-auto 2xl:px-0 px-3">
                 {/* <h2 className="md:text-2xl text-xl font-bold  md:mb-2">📌 Why These Tracks Matter</h2> */}
                 <h1 className="text-center w-fit mx-auto rounded-full font-semibold lg:text-3xl text-xl bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
                     📌 Why These Tracks Matter

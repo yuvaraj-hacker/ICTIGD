@@ -27,27 +27,26 @@ function AimandScope() {
                         <h1 className="text-center w-fit mx-auto rounded-full font-semibold lg:text-3xl text-xl bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
                             Vision
                         </h1>
-                        <div className='flex flex-col gap-3'>
-                            <h2 className='md:text-xl font-semibold'> 1. Artificial Intelligence and Machine Learning for Development </h2>
-                            <ul className='list-disc ml-8 md:text-lg text-sm  '>
+                        <div className='flex flex-col gap-3 justify-center'>
+                            <h2 className='md:text-xl font-semibold'>Artificial Intelligence and Machine Learning for Development </h2>
+                            <ul className='list-disc ml-8 md:text-lg text-sm'>
                                 <li>   Predictive analytics for healthcare, education, agriculture  </li>
                                 <li>AI for decision-making in policy and governance</li>
                                 <li>Ethics and fairness in AI for underserved populations</li>
                             </ul>
                         </div>
                         <div className='flex flex-col gap-3'>
-                            <h2 className='md:text-xl font-semibold'> 2.  Smart Cities and Urban Transformation </h2>
-                            <ul className='list-disc ml-8 md:text-lg text-sm  '>
+                            <h2 className='md:text-xl font-semibold'>Smart Cities and Urban Transformation </h2>
+                            <ul className='list-disc ml-8 md:text-lg text-sm'>
                                 <li> Intelligent transportation and mobility
-
                                 </li>
                                 <li>Urban sustainability through IoT and automation</li>
                                 <li>Data-driven governance and smart infrastructure</li>
                             </ul>
                         </div>
                         <div className='flex flex-col gap-3'>
-                            <h2 className='md:text-xl font-semibold'> 3.   Sustainable and Green Technologies </h2>
-                            <ul className='list-disc ml-8 md:text-lg text-sm  '>
+                            <h2 className='md:text-xl font-semibold'>Sustainable and Green Technologies </h2>
+                            <ul className='list-disc ml-8 md:text-lg text-sm'>
                                 <li>Renewable energy systems and smart grids
                                 </li>
                                 <li>Circular economy models and eco-innovation</li>
@@ -55,8 +54,8 @@ function AimandScope() {
                             </ul>
                         </div>
                         <div className='flex flex-col gap-3'>
-                            <h2 className='md:text-xl font-semibold'> 4. Internet of Things (IoT) and Embedded Systems </h2>
-                            <ul className='list-disc ml-8 md:text-lg text-sm  '>
+                            <h2 className='md:text-xl font-semibold'>Internet of Things (IoT) and Embedded Systems </h2>
+                            <ul className='list-disc ml-8 md:text-lg text-sm'>
                                 <li>IoT for agriculture, water management, and disaster response
                                 </li>
                                 <li>Smart devices in healthcare and home automation</li>
