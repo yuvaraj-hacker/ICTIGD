@@ -110,7 +110,7 @@ function Abstracting() {
                             <div className="grid grid-cols-1 md:grid-cols-1 gap-6 ">
                                 {/* Submission Guidelines */}
                                 <div className=" ">
-                                    <h3 className="md:text-xl font-bold   mb-4 flex items-center gap-2">
+                                    <h3 className="md:text-xl font-semibold   mb-4 flex items-center gap-2   bg-gradient-to-r from-[#2487DB] to-[#014BBD]  text-white  md:p-2 p-3 rounded-md">
                                         {/* <i className="fi fi-bs-check flex items-center"></i> */}
                                         Submission Guidelines :
                                     </h3>
@@ -145,8 +145,8 @@ function Abstracting() {
                                     </ul>
                                 </div>
                                 {/* Important Notes */}
-                                <div className=" ">
-                                    <h3 className="md:text-xl font-bold   mb-4 flex items-center gap-2">
+                                <div className="">
+                                    <h3 className="mb-4 flex items-center gap-2 md:text-xl font-semibold bg-gradient-to-r from-[#2487DB] to-[#014BBD]  text-white  md:p-2 p-3 rounded-md">
                                         {/* <i className="fi fi-ts-octagon-exclamation flex items-center"></i> */}
                                         Important Notes :
                                     </h3>
