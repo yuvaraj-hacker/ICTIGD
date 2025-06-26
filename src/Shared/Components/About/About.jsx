@@ -10,6 +10,7 @@ function About() {
     "Industry Professionals and Startups",
     "NGOs and Development Agencies",
     "Students and Innovators",
+    "Technology Consultants",
   ];
 
   return (
