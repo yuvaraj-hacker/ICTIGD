@@ -1,0 +1,21 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx,html}"
+  ],
+  safelist: [
+    'bg-gradient-to-r',
+    'from-[#2487DB]',
+    'to-[#014BBD]',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        primary: '#1B1F3B',
+        secondary: '#dfe0df',
+      },
+    },
+  },
+  plugins: [],
+};

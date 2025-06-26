@@ -1,0 +1,144 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("../node_modules/@flaticon/flaticon-uicons/css/all/all.css");
+@import "tailwindcss";
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;     */
+
+body {
+    font-family: "inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #F5F7FA;
+}
+
+/* .merry {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+} */
+
+@media (min-width: 1024px) {
+    .clip-md {
+        clip-path: polygon(0 0, 55% 0, 43% 100%, 0% 100%);
+    }
+}
+
+
+.head-shap {
+    clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0 100%, 0 0);
+}
+
+.bg-primary {
+    background-color: #1B1F3B;
+}
+
+
+
+.react-calendar__navigation {
+    background-color: #005248;
+    color: #fff;
+    text-align: center;
+}
+
+.react-calendar__navigation__label {
+    padding: 5px 20px;
+    height: 50px;
+    width: 170px
+}
+
+.react-calendar__navigation__label:hover {
+    color: #fff;
+}
+
+.react-calendar__month-view__weekdays {
+    border: 2px solid #94a3b8;
+    text-align: center;
+    padding: 8px;
+}
+
+.react-calendar__month-view__weekdays__weekday>abbr {
+    text-decoration: none;
+}
+
+.react-calendar__month-view__days {
+    border: 2px solid #94a3b8;
+    border-top: none;
+}
+
+.react-calendar__navigation__arrow:hover {
+    color: #fff;
+}
+
+.react-calendar__navigation__arrow {
+    padding: 0 25px;
+}
+
+.current-date {
+    background-color: #005248;
+
+    color: white;
+
+}
+
+.react-calendar__navigation__prev2-button,
+.react-calendar__navigation__next2-button {
+    display: none;
+}
+
+.react-calendar__month-view__days__day {
+    padding: 8px;
+}
+
+
+
+.detail-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 0.7rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.detail-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.class {
+    animation: ken-burns 20s ease-in-out infinite;
+}
+
+@keyframes ken-burns {
+    0% {
+        transform: scale(1.1) translateX(0) translateY(0);
+    }
+
+    25% {
+        transform: scale(1.15) translateX(-2%) translateY(-1%);
+    }
+
+    50% {
+        transform: scale(1.2) translateX(1%) translateY(-2%);
+    }
+
+    75% {
+        transform: scale(1.15) translateX(-1%) translateY(1%);
+    }
+
+    100% {
+        transform: scale(1.1) translateX(0) translateY(0);
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .clip {
+        clip-Path: polygon(60px 0%, 100% 0%, 100% calc(100% - 60px), calc(100% - 60px) 100%, 0% 100%, 0% 60px);
+    }
+}
