@@ -65,7 +65,6 @@ function AimandScope() {
                                     </li>
                                 </ul>
                             </div>
-
                         </div>
                     </div>
                 </section>
