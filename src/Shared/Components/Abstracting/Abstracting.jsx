@@ -212,7 +212,7 @@ function Abstracting() {
                                                     <select name="Paper_Track" id="Paper_Track" value={formData.Paper_Track || ""}
                                                         onChange={handleChange}
                                                         required
-                                                        className="shadow-sm bg-white border rounded-md border-gray-200 text-black text-sm focus:ring-primary-500 focus:border-primary-500 block w-full p-2 mt-4"                                                >
+                                                        className="shadow-sm bg-white border rounded-md border-gray-200 p-2.5 text-black text-sm focus:ring-primary-500 focus:border-primary-500 block w-full p-2 mt-4"                                                >
                                                         <option value="">Select Track</option>
                                                         <option value="TechForDevelopment">Technology for Sustainable Development</option>
                                                         <option value="SmartInfrastructure">Smart Infrastructure and Urban Innovation</option>
