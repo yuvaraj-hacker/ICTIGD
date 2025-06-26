@@ -18,7 +18,7 @@ function About() {
       <section className="flex flex-col  md:gap-10 gap-5  max-w-[80rem]  md:py-10 py-5 mx-auto md:px-5 px-3   ">
         <section className="grid md:grid-cols-2 grid-cols-1 md:gap-5 gap-3 items-center">
           <div className="rounded-xl overflow-hidden">
-            <img className="h-64 sm:h-80 w-full object-cover" style={{ clipPath: 'polygon(0 0, calc(100% - 60px) 0, 100% 60px, 100% 100%, 60px 100%, 0 calc(100% - 60px))' }} rel="preload" src="/assets/images/aboutus.jpg" alt="Conference Visual" />
+              <img className="h-64 sm:h-80 w-full object-cover" style={{ clipPath: 'polygon(0 0, calc(100% - 60px) 0, 100% 60px, 100% 100%, 60px 100%, 0 calc(100% - 60px))' }} rel="preload" src="/assets/images/aboutus.jpg" alt="Conference Visual" />
           </div>
           <div className=' flex flex-col md:gap-5 gap-3'>
             {/* <h1 className=" text-center font-semibold  lg:text-2xl text-lg">
