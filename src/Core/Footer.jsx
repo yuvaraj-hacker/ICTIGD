@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <>
-
       <footer className=" lg:px-3 lg:pb-3 ">
         <div className='bg-[#1B1F3B] text-white   '>
           <div className="max-w-[90rem] mx-auto px-5 lg:py-10 py-6">
@@ -33,7 +32,7 @@ const Footer = () => {
               <div className="text-center md:text-left mx-auto">
                 <h4 className="text-lg font-semibold mb-2">Contact</h4>
                 <ul className="space-y-1 text-sm">
-                  <li>Email: <a href="mailto:info.iciscm@gmail.com" className="underline">info.iciscm@gmail.com</a></li>
+                  <li>Email: <a href="mailto:info.ictigd@gmail.com" className="underline">info.ictigd@gmail.com</a></li>
                   <li>Location: Chennai, India</li>
                 </ul>
               </div>

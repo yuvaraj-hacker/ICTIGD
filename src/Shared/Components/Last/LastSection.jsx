@@ -32,7 +32,7 @@ function LastSection() {
                                         <i className="fi fi-ss-envelope text-white flex items-center text-2xl md:text-2xl "></i>
                                     </div>
                                     <div className="md:text-lg text-sm text-white">
-                                        <p>info.icbdcc@gmail.com</p>
+                                        <p>info.ictigd@gmail.com</p>
                                         <p>Chennai, India</p>
                                     </div>
                                 </div>
