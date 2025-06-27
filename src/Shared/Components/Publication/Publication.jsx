@@ -68,7 +68,7 @@ function Publication() {
                             Registration Details
                         </h1>
                     </div>
-                    <div className="max-w-[80rem] mx-auto bg-gradient-to-tr from-[#f0f4ff] to-[#e2ecfc]   shadow-xl p-6">
+                    <div className="max-w-[80rem] mx-auto bg-gradient-to-tr from-[#f0f4ff] to-[#e2ecfc]   shadow-xl md:p-6 p-3">
                         <h2 className="md:text-2xl font-bold  mb-6 flex items-center gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6  " fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 10h18M4 6h16M4 14h16M4 18h16" />
