@@ -204,7 +204,7 @@ export const Home = () => {
               </div>
             </div>
           </section>
-          <section className="  max-w-[80rem]   mx-auto  flex flex-col md:gap-7 gap-3">
+          <section className="max-w-[80rem] mx-auto flex flex-col md:gap-7 gap-3">
             <h1 className="text-center w-fit mx-auto rounded-full font-semibold lg:text-3xl text-xl p-1 bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
               Key Invitees
             </h1>
