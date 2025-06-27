@@ -145,7 +145,7 @@ export const Home = () => {
                     </p>
                     <div className="md:mx-0 mx-auto">
                       <Link to="/about">
-                        <button className="font-semibold bg-white hover:bg-[#f0f4ff] duration-300   text-[#014BBD] md:text-base text-sm   px-6 shadow-lg py-2 md:py-3  cursor-pointer">
+                        <button className="font-semibold bg-white hover:bg-[#f0f4ff] duration-300 text-[#014BBD] md:text-base text-sm px-6 shadow-lg py-2 md:py-3  cursor-pointer">
                           Read More
                         </button>
                       </Link>
