@@ -84,9 +84,8 @@ const Header = () => {
           <div className="flex items-center justify-between lg:gap-0  gap-5  ">
             <Link to='/'>
               <div className="md:hidden block   ">
-                {/* <img className='w-32 h-14 object-contain' src="/assets/Images/ICISCM.png" alt="" /> */}
-                <div className="   md:hidden  block  text-white font-bold">ICTIGD</div>
-                {/* <img className='w-40' src="/assets/Images/ICBDCC.png" alt="" /> */}
+                <img className='w-32 h-14 object-contain bg-white p-2' src="/assets/images/ictigd-logo.png" alt="" />
+                {/* <div className="   md:hidden  block  text-white font-bold">ICTIGD</div> */}
               </div>
             </Link>
             <div className={`md:hidden block  ${menuOpen ? "z-50" : ""}`}>
@@ -128,14 +127,14 @@ const Header = () => {
       <section
         // className={`md:bg-white  md:border-b-4  border-b-[#14AE5C]  ${menuOpen ? " block" : " md:block hidden"}`}
         className={` -xl fixed top-0 right-0 h-full w-64 z-40 bg-[#F5F7FA] ${menuOpen ? "translate-x-0 duration-300" : "translate-x-full duration-300"} md:block md:relative md:w-auto md:translate-x-0`} >
-        <header className="max-w-[90rem] mx-auto md:px-5 px-2 h-full py-3 w-full">
+        <header className="max-w-[90rem] mx-auto md:px-5 px-2 h-full   w-full">
           <div className="md:flex md:justify-between justify-center items-center ">
             <Link to='/'>
-              {/* <img className='w-32 md:block hidden h-16 object-contain  ' src="/assets/Images/ICISCM.png" alt="" /> */}
-              <div className=" md:block hidden  text-black font-bold text-3xl">ICTIGD</div>
+              <img className='lg:w-48 w-40 md:block hidden h-16 object-contain  ' src="/assets/images/ictigd-logo.png" alt="" />
+              {/* <div className=" md:block hidden  text-black font-bold text-3xl">ICTIGD</div> */}
             </Link>
             <nav ref={dropdownRef}>
-              <div className={`space-x-3 md:block  mx-auto  md:pt-0  pt-20  ${menuOpen ? "flex flex-col space-y-4" : ""}`}>
+              <div className={`md:space-x-3 md:block  mx-auto  md:pt-0 pt-20  ${menuOpen ? "flex flex-col space-y-4" : ""}`}>
                 {navLinks.map((link) => (
                   <div key={link.to} className=" inline-block group relative"
                     // onMouseEnter={() => handleMouseEnter(link.label)}
