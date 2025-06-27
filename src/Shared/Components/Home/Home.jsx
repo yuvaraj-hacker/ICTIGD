@@ -117,7 +117,7 @@ export const Home = () => {
                   </div>
                 </div>
               </div>
-              <div className="  max-w-[110rem] mx-auto z-10 text-black bg-white md:py-4 py-2 border-y-4 border-[#014BBD] overflow-hidden ">
+              <div className="  max-w-[110rem] mx-auto z-10 text-black bg-white md:p-4 p-2 border-y-4 border-[#014BBD] overflow-hidden ">
                 <Marquee pauseOnHover>
                   <p className="bg-gradient-to-r  overflow-hidden from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent font-bold md:text-xl"> TECH INTEGRATION 2025 <span className="animate-spin inline-block text-[#014BBD]"> ✦ </span> GLOBAL DEVELOPMENT SUMMIT <span className="animate-spin inline-block text-[#014BBD]"> ✦ </span> ICT FOR GLOBAL CHANGE <span className="animate-spin inline-block text-[#014BBD]"> ✦ </span> INTERNATIONAL TECH SUMMIT <span className="animate-spin inline-block text-[#014BBD]"> ✦ </span> AUGUST 22–24, 2025  <span className="animate-spin inline-block text-[#014BBD]"> ✦ </span>  </p>
                 </Marquee>
@@ -127,7 +127,7 @@ export const Home = () => {
         </section>
       </section>
       <section className=" ">
-        <section className="max-w-[80rem] pt-7 md:pt-10 mx-auto md:px-5 px-3 flex flex-col md:gap-10 gap-7">
+        <section className="max-w-[80rem] pt-7 md:pt-10 mx-auto md:px-5 px-3 flex flex-col md:gap-10 gap-5">
           <section className="grid md:grid-cols-1 grid-cols-1 md:gap-5 gap-3 items-start">
             <div className='flex flex-col md:gap-7 gap-3'>
               <h1 className="text-center w-fit mx-auto rounded-full font-semibold lg:text-3xl text-xl bg-gradient-to-r p-1 from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
