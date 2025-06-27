@@ -93,9 +93,7 @@ function Publication() {
                         </div>
 
                         {/* Payment Instructions */}
-                        <div className="bg-white p-6   shadow-md " style={{
-                            clipPath: 'polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px))',
-                        }}>
+                        <div className="bg-white p-6   shadow-md " style={{ clipPath: 'polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px))', }}>
                             <h3 className="text-xl font-semibold   mb-4 border-b pb-2">
                                 Payment Instructions
                             </h3>
