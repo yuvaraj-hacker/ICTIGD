@@ -84,7 +84,7 @@ const Header = () => {
           <div className="flex items-center justify-between lg:gap-0  gap-5  ">
             <Link to='/'>
               <div className="md:hidden block   ">
-                <img className='w-32 h-14 object-contain bg-white p-2' src="/assets/images/ictigd-logo.png" alt="" />
+                <img className='w-32 h-14 object-contain  ' src="/assets/images/formobile.png" alt="" />
                 {/* <div className="   md:hidden  block  text-white font-bold">ICTIGD</div> */}
               </div>
             </Link>

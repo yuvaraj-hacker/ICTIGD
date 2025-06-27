@@ -8,9 +8,10 @@ const Footer = () => {
         <div className='bg-[#1B1F3B] text-white   '>
           <div className="max-w-[90rem] mx-auto px-5 lg:py-10 py-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-              <div className="text-center md:text-left mx-auto">
-                <h3 className="text-2xl font-bold mb-2">ICTIGD</h3>
-                <p className="text-sm text-gray-200">
+              <div className="text-center md:text-left mx-auto flex flex-col gap-4">
+                {/* <h3 className="text-2xl font-bold mb-2">ICTIGD</h3> */}
+                <img className=' w-40 mx-auto md:mx-0' src="/assets/images/formobile.png" alt="" />
+                <p className="text-sm text-gray-200  ">
                   International Conference on Technology Integration for Global Development
                 </p>
               </div>
