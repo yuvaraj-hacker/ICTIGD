@@ -42,13 +42,13 @@ function Publication() {
                                 event: "Last Date for Registration / Payment",
                             },
                         ].map((item, index) => (
-                            <div key={index}  style={{
-                                    clipPath: 'polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px))',
-                                }} className="  relative   w-full h-full flex items-center   shadow-md p-5 hover:shadow-xl transition duration-300 bg-white/80 backdrop-blur-sm"  >
+                            <div key={index} style={{
+                                clipPath: 'polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px))',
+                            }} className="  relative   w-full h-full flex items-center   shadow-md p-5 hover:shadow-xl transition duration-300 bg-white/80 backdrop-blur-sm"  >
                                 <section className="  ">
-                                    <div className="flex items-center gap-5 z-10 relative  h-full ">
+                                    <div className="flex items-center gap-5 z-10 relative h-full ">
                                         <div className="  text-[#1B1F3B] font-semibold p-5 bg-gradient-to-r from-[#2487DB] to-[#014BBD] rounded-full text-sm md:text-base  whitespace-nowrap">
-                                               <i className="fi fi-sr-calendar flex items-center text-white md:text-3xl text-xl"></i>
+                                            <i className="fi fi-sr-calendar flex items-center text-white md:text-3xl text-xl"></i>
                                         </div>
                                         <div className="md:text-base text-sm font-medium flex flex-col gap-5">
                                             <p className=" w-fit p-2 text-white  md:px-5 px-3  bg-gradient-to-r from-[#2487DB] to-[#014BBD]">{item.date}</p>
@@ -83,19 +83,19 @@ function Publication() {
                                 { label: 'IFSC Code', value: 'XXXXXXXX' },
                                 { label: 'MICR', value: 'XXXXXXXX' },
                             ].map((item, idx) => (
-                                <div key={idx} className="bg-white p-4   "  style={{
+                                <div key={idx} className="bg-white p-4   " style={{
                                     clipPath: 'polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px))',
                                 }}>
-                                      <p className="text-gray-500 text-sm font-medium">{item.label}</p>
+                                    <p className="text-gray-500 text-sm font-medium">{item.label}</p>
                                     <p className="text-gray-900 font-semibold mt-1">{item.value}</p>
                                 </div>
                             ))}
                         </div>
 
                         {/* Payment Instructions */}
-                        <div className="bg-white p-6   shadow-md "  style={{
-                                    clipPath: 'polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px))',
-                                }}>
+                        <div className="bg-white p-6   shadow-md " style={{
+                            clipPath: 'polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px))',
+                        }}>
                             <h3 className="text-xl font-semibold   mb-4 border-b pb-2">
                                 Payment Instructions
                             </h3>
