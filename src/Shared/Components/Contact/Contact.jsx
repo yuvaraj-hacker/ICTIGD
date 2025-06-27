@@ -11,8 +11,6 @@ function Contact() {
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
-
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus('Sending...');
@@ -106,7 +104,7 @@ function Contact() {
                                             ></textarea>
                                         </div>
                                         <div className="text-center md:mt-0 mt-5  lg:col-span-2">
-                                            <button type="submit" className="py-3 px-6 text-sm    rounded-full text-center   shadow-lg  hover:shadow-xl  bg-white  text-[#014BBD]  cursor-pointer  font-semibold   " >
+                                            <button type="submit" className="py-3 px-6 text-sm    rounded-full text-center   shadow-lg  hover:shadow-xl  bg-white hover:bg-[#f0f4ff] duration-300  text-[#014BBD]  cursor-pointer  font-semibold   " >
                                                 {status === 'Sending...' ? 'Submitting...' : 'Send message'}
                                             </button>
                                         </div>

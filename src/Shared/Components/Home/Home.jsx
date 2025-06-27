@@ -158,7 +158,7 @@ export const Home = () => {
                   </h1>
                   <div className=" md:mx-0 mx-auto">
                     <Link to="/paper-submission">
-                      <button className="  bg-white   font-semibold  text-[#014BBD] px-6 py-3 rounded-full cursor-pointer  hover:scale-95 duration-300  ">
+                      <button className="  bg-white hover:bg-[#f0f4ff] duration-300  font-semibold  text-[#014BBD] px-6 py-3 rounded-full cursor-pointer   ">
                         Register Now
                       </button>
                     </Link>
@@ -194,7 +194,7 @@ export const Home = () => {
                     </p>
                     <div className="md:mx-0 mx-auto">
                       <Link to="/about">
-                        <button className=" font-semibold hover:scale-95 duration-300  text-[#014BBD] bg-white px-6 shadow-xl  py-3 rounded-full cursor-pointer">
+                        <button className=" font-semibold bg-white hover:bg-[#f0f4ff] duration-300   text-[#014BBD]   px-6 shadow-xl  py-3 rounded-full cursor-pointer">
                           Read More
                         </button>
                       </Link>
@@ -279,7 +279,7 @@ export const Home = () => {
                       placeholder="Leave a Message..." ></textarea>
                   </div>
                   <div className="text-center md:mt-0 mt-5 lg:col-span-2">
-                    <button type="submit" className="py-3 px-6 text-sm  font-semibold rounded-full text-center  hover:scale-95 duration-300 shadow-xl   bg-white  text-[#014BBD]  cursor-pointer     " >
+                    <button type="submit" className="py-3 px-6 text-sm  font-semibold rounded-full text-center   shadow-xl   bg-white hover:bg-[#f0f4ff] duration-300  text-[#014BBD]  cursor-pointer     " >
                       {status === 'Sending...' ? 'Submitting...' : 'Send message'}
                     </button>
                   </div>
