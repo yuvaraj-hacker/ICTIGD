@@ -27,7 +27,7 @@ function KeyDates({ Dates, Title }) {
                     <i className="fi fi-sr-calendar flex items-center text-white md:text-3xl text-xl"></i>
                 </div>
                 <div className="md:text-base text-sm font-medium flex flex-col gap-5">
-                    <p className=" border-2 w-fit p-2   md:px-5 px-3 border-[#014BBD]">{Dates}</p>
+                    <p className=" w-fit p-2 text-white   md:px-5 px-3 bg-gradient-to-r from-[#2487DB] to-[#014BBD]">{Dates}</p>
                     <p className="md:text-lg "> {Title}</p>
                 </div>
             </div>
