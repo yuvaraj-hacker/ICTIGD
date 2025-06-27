@@ -19,7 +19,7 @@ function Issues({ }) {
                 </h1>
                 <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 md:gap-10 gap-5">
                     {Tech.map((member, index) => (
-                    <Edit key={index} position={member.position} Name={member.Name} location={member.location} />
+                        <Edit key={index} position={member.position} Name={member.Name} location={member.location} />
                     ))}
                 </div>
             </section>
