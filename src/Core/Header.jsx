@@ -142,15 +142,15 @@ const Header = () => {
                     // onMouseLeave={handleMouseLeave}
                     onMouseEnter={() => window.innerWidth >= 768 && handleMouseEnter(link.label)}
                     onMouseLeave={() => window.innerWidth >= 768 && handleMouseLeave()}>
-                    <Link to={link.to} className={`py-2 flex lg:w-[144px] md:w-[130px] w-full transition-all duration-300 ease-in-out lg:text-base md:text-sm justify-center items-center gap-2 bg-gradient-to-b from-[#2487DB] to-[#014BBD] rounded-full text-white ${isActive(link.to) || hoveredCategory === link.label ? 'md:border-t-0 border-t-[#14AE5C] duration-300 text-[#1B1F3B]' : ''} `}
+                    <Link to={link.to} className={`py-2 flex lg:w-[144px] md:w-[130px] w-full transition-all duration-300 ease-in-out lg:text-base md:text-sm justify-center items-center gap-2 bg-gradient-to-b from-[#2487DB] to-[#014BBD]   text-white ${isActive(link.to) || hoveredCategory === link.label ? 'md:border-t-0 border-t-[#14AE5C] duration-300 text-[#1B1F3B]' : ''} `}
                       onClick={(e) => { if (link.dropdown) { e.preventDefault(); setHoveredCategory((prev) => (prev === link.label ? null : link.label)); } else { setMenuOpen(false); } }}   >
                       {link.label}
                       {link.dropdown && (<i className={`fi fi-sr-angle-circle-down flex items-center  transition-all duration-300 ease-in-out  rounded-full text-white ${ hoveredCategory === link.label ? 'bg-[#14AE5C] text-white rotate-180 duration-100' : ' '} `}></i>)}
                     </Link>
                     {hoveredCategory === link.label && link.dropdown && (
-                      <div className="md:absolute left-0 top-full md:w-[260px] w-full rounded-lg md:bg-gradient-to-b from-[#2487DB] to-[#014BBD]   transition-all duration-300 ease-in-out opacity-100 scale-y-100 origin-top  grid md:grid-cols-1 md:p-3 z-10">
+                      <div className="md:absolute left-0 top-full md:w-[260px] w-full   bg-gradient-to-b from-[#2487DB] to-[#014BBD]   transition-all duration-300 ease-in-out opacity-100 scale-y-100 origin-top  grid md:grid-cols-1 md:p-3 z-10">
                         {link.dropdown.map((dropdownlink) => (
-                          <Link key={dropdownlink.to} to={dropdownlink.to} className="block md:px-4 px-4 py-2 md:text-white md:text-start text-center  text-[#1B1F3B]" onClick={() => { setHoveredCategory(null); setMenuOpen(false); }} >
+                          <Link key={dropdownlink.to} to={dropdownlink.to} className="block md:px-4 px-4 py-2 text-white md:text-start text-center  text-[#1B1F3B]" onClick={() => { setHoveredCategory(null); setMenuOpen(false); }} >
                             {dropdownlink.label}
                           </Link>
                         ))}

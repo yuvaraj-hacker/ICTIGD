@@ -181,27 +181,27 @@ function Abstracting() {
                                                     <label for="paperTitle" className="block mb-2 text-sm text-[#1B1F3B mt-4 ">
                                                         Paper Title
                                                     </label>
-                                                    <input type="text" ngModel id="paperTitle" name="paperTitle" value={formData.paperTitle} onChange={handleChange} className="shadow-sm bg-white    text-black       border text-sm  rounded-md border-gray-200  focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5   mt-4" placeholder="Enter the Paper Title" required />
+                                                    <input type="text" ngModel id="paperTitle" name="paperTitle" value={formData.paperTitle} onChange={handleChange} className="shadow-sm bg-white    text-black       border text-sm    border-gray-200  focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5   mt-4" placeholder="Enter the Paper Title" required />
                                                 </div>
                                                 <div>
                                                     <label for="name" className="block mb-2 text-sm text-[#1B1F3B] mt-4">
                                                         Name
                                                     </label>
-                                                    <input type="text" name="name" id="name" ngModel value={formData.name} onChange={handleChange} className="shadow-sm bg-white   border    rounded-md border-gray-200  text-black text-sm   focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5   mt-4        "
+                                                    <input type="text" name="name" id="name" ngModel value={formData.name} onChange={handleChange} className="shadow-sm bg-white   border      border-gray-200  text-black text-sm   focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5   mt-4        "
                                                         placeholder="Enter Your Name" required />
                                                 </div>
                                                 <div>
                                                     <label for="email" className="block mb-2 text-sm   text-[#1B1F3B]   mt-4  ">
                                                         Email
                                                     </label>
-                                                    <input type="email" name="email" id="email" value={formData.email} ngModel onChange={handleChange} className="shadow-sm bg-white   border   rounded-md border-gray-200  text-black text-sm   focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5   mt-4 "
+                                                    <input type="email" name="email" id="email" value={formData.email} ngModel onChange={handleChange} className="shadow-sm bg-white   border     border-gray-200  text-black text-sm   focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5   mt-4 "
                                                         placeholder="name@gmail.com" required />
                                                 </div>
                                                 <div>
                                                     <label for="number" className="block mb-2 text-sm   text-[#1B1F3B]   mt-4 "  >
                                                         Contact Number
                                                     </label>
-                                                    <input type="text" name="number" id="number" value={formData.number} ngModel onChange={handleChange} className="shadow-sm bg-white    border    rounded-md border-gray-200  text-black text-sm   focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5   mt-4  "
+                                                    <input type="text" name="number" id="number" value={formData.number} ngModel onChange={handleChange} className="shadow-sm bg-white    border      border-gray-200  text-black text-sm   focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5   mt-4  "
                                                         placeholder="Enter Your Mobile Number" required
                                                     />
                                                 </div>
@@ -209,7 +209,7 @@ function Abstracting() {
                                                     <label for="institution" className="block mb-2 text-sm   text-[#1B1F3B] mt-4 " >
                                                         Institution Name
                                                     </label>
-                                                    <input type="text" name="institution" id="institution" value={formData.institution} ngModel onChange={handleChange} className="shadow-sm  bg-white    rounded-md border-gray-200 border  text-black text-sm   focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 mt-4" placeholder="Enter Your Institute" required />
+                                                    <input type="text" name="institution" id="institution" value={formData.institution} ngModel onChange={handleChange} className="shadow-sm  bg-white      border-gray-200 border  text-black text-sm   focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 mt-4" placeholder="Enter Your Institute" required />
                                                 </div>
                                                 <div>
                                                     <label for="institution" className="block mb-2 text-sm text-[#1B1F3B] mt-4 " >
@@ -218,7 +218,7 @@ function Abstracting() {
                                                     <select name="Paper_Track" id="Paper_Track" value={formData.Paper_Track || ""}
                                                         onChange={handleChange}
                                                         required
-                                                        className="shadow-sm bg-white border rounded-md border-gray-200 p-2.5 text-black text-sm focus:ring-primary-500 focus:border-primary-500 block w-full p-2 mt-4"                                                >
+                                                        className="shadow-sm bg-white border   border-gray-200 p-2.5 text-black text-sm focus:ring-primary-500 focus:border-primary-500 block w-full   mt-4"                                                >
                                                         <option value="">Select Track</option>
                                                         <option value="TechForDevelopment">Technology for Sustainable Development</option>
                                                         <option value="SmartInfrastructure">Smart Infrastructure and Urban Innovation</option>
@@ -239,7 +239,7 @@ function Abstracting() {
                                                 </div>
                                                 <div className="md:col-span-2 mt-5">
                                                     <label className="block mb-2 text-sm text-[#1B1F3B]">Upload Paper</label>
-                                                    <input type="file" id="paper" name="paper" onChange={handleChange} accept=".pdf,.doc,.docx" required className="w-full p-2   border text-sm  rounded-md border-gray-200 ring-1 ring-transparent bg-white focus:ring-[#0B4F8E] focus:outline-none" />
+                                                    <input type="file" id="paper" name="paper" onChange={handleChange} accept=".pdf,.doc,.docx" required className="w-full p-2   border text-sm    border-gray-200 ring-1 ring-transparent bg-white focus:ring-[#0B4F8E] focus:outline-none" />
                                                     <p className=" text-xs mt-3">* Maximum File Size: 10 MB</p>
                                                 </div>
                                                 {uploadFile && (
@@ -252,7 +252,7 @@ function Abstracting() {
                                                 )}
                                                 <div className="text-center mx-auto mt-5  md:col-span-2">
                                                     <button type="submit" disabled={status === 'Sending...'}
-                                                        className="py-3 px-5 text-sm  bg-primary-blue-color  text-center   hover:bg-[#f0f4ff] duration-300    shadow-lg    bg-white cursor-pointer font-semibold hover:text-primary-blue-color rounded-full     text-[#014BBD]   bg-primary-red-color sm:w-fit hover:bg-primary-800  focus:outline-none  " >
+                                                        className="py-3 px-5 text-sm  bg-primary-blue-color  text-center   hover:bg-[#f0f4ff] duration-300    shadow-lg    bg-white cursor-pointer font-semibold hover:text-primary-blue-color   text-[#014BBD]   bg-primary-red-color sm:w-fit hover:bg-primary-800  focus:outline-none  " >
                                                         {status === 'Sending...' ? 'Submitting...' : 'Submit Paper'}
                                                     </button>
                                                 </div>

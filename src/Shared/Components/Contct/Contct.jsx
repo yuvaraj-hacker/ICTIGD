@@ -9,7 +9,7 @@ function Contct() {
                         <section className=" flex flex-col gap-10 ">
                             <div className="grid lg:grid-cols-3 grid-cols-1 gap-5 md:gap-10">
                                 <div className="text-center flex  md:flex-row flex-col items-center md:gap-4 gap-2">
-                                    <div className=" px-4 py-4 bg-[#0000ff]  w-fit rounded-full mx-auto">
+                                    <div className=" px-4 py-4 bg-[#0000ff]  w-fit rounded-full  ">
                                         <i className="fi fi-rs-land-layer-location text-white flex items-center text-2xl md:text-2xl " />
                                     </div>
                                     <div className="md:text-lg text-sm text-white">
@@ -17,8 +17,8 @@ function Contct() {
                                         <p>Chennai, India</p>
                                     </div>
                                 </div>
-                                <div className="text-center flex md:flex-row flex-col  items-center md:gap-4 gap-2">
-                                    <div className=" px-4 py-4 bg-[#097a3e] w-fit rounded-full mx-auto">
+                                <div className="text-center flex md:flex-row flex-col  items-center md:gap-4 gap-2 mx-auto">
+                                    <div className=" px-4 py-4 bg-[#097a3e] w-fit rounded-full ">
                                         <i className="fi fi-rr-clock text-white flex items-center text-2xl md:text-2xl " />
                                     </div>
                                     <div className="md:text-lg text-sm text-white">
@@ -26,8 +26,8 @@ function Contct() {
                                         <p>9:00 AM - 6:00 PM</p>
                                     </div>
                                 </div>
-                                <div className="text-center flex  md:flex-row flex-col  items-center md:gap-4 gap-2">
-                                    <div className=" px-4 py-4 bg-[#1b2150] w-fit rounded-full mx-auto">
+                                <div className="text-center flex  md:flex-row flex-col  items-center md:gap-4 gap-2 mx-auto">
+                                    <div className=" px-4 py-4 bg-[#1b2150] w-fit rounded-full ">
                                         <i className="fi fi-ss-envelope text-white flex items-center text-2xl md:text-2xl "></i>
                                     </div>
                                     <div className="md:text-lg text-sm text-white">

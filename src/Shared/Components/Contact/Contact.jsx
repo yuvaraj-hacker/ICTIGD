@@ -64,9 +64,9 @@ function Contact() {
                                 <div className="mx-auto max-w-screen-md relative">
                                     {/* <div className="absolute top-0 right-0 w-20 h-20 bg-[#269C52] rounded-bl-full transform translate-x-6 -translate-y-6 -hover:scale-110 transition-transform duration-500"></div> */}
                                     <form onSubmit={handleSubmit} className="w-full grid lg:grid-cols-2 gap-5 bg-gradient-to-tr shadow-xl   from-[#f0f4ff] to-[#e2ecfc]   p-5 "
-                                    style={{
-                                        clipPath: 'polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px))',
-                                    }} ngNativeValidate>
+                                        style={{
+                                            clipPath: 'polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px))',
+                                        }} ngNativeValidate>
                                         <div className="">
                                             <label for="email" className="block mb-2 text-sm mt-4   ">
                                                 Name
@@ -74,20 +74,20 @@ function Contact() {
                                             <input type="text" name="name" id="name"
                                                 value={formData.name}
                                                 onChange={handleChange}
-                                                ngModel className="shadow-sm   border text-sm  rounded-md border-gray-300  focus:outline-none bg-white text-black focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5  mt-4" placeholder="Enter Your Name" required />
+                                                ngModel className="shadow-sm   border text-sm    border-gray-300  focus:outline-none bg-white text-black focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5  mt-4" placeholder="Enter Your Name" required />
                                         </div>
                                         <div>
                                             <label for="email" className="block mb-2 text-sm mt-4  ">
                                                 Email
                                             </label>
-                                            <input type="email" name="email" id="email" onChange={handleChange} value={formData.email} ngModel className="shadow-sm   focus:outline-none border bg-white text-black rounded-md border-gray-300    text-sm   focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5   mt-4 "
+                                            <input type="email" name="email" id="email" onChange={handleChange} value={formData.email} ngModel className="shadow-sm   focus:outline-none border bg-white text-black   border-gray-300    text-sm   focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5   mt-4 "
                                                 placeholder="name@gmail.com" required />
                                         </div>
                                         <div>
                                             <label for="email" className="block mb-2 text-sm       mt-4 "  >
                                                 Contact Number
                                             </label>
-                                            <input type="text" name="number" id="number" onChange={handleChange} value={formData.number} ngModel className="shadow-sm  focus:outline-none bg-white text-black  border rounded-md border-gray-300    text-sm   focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5   mt-4  "
+                                            <input type="text" name="number" id="number" onChange={handleChange} value={formData.number} ngModel className="shadow-sm  focus:outline-none bg-white text-black  border   border-gray-300    text-sm   focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5   mt-4  "
                                                 placeholder="Enter Your Mobile Number" required />
                                         </div>
                                         <div className="lg:col-span-2 mt-4">
@@ -99,12 +99,12 @@ function Contact() {
                                                 onChange={handleChange}
                                                 ngModel
                                                 rows="4"
-                                                className="block p-2.5 w-full text-sm shadow-sm border bg-white text-black  focus:outline-none rounded-md border-gray-300   focus:ring-primary-500 focus:border-primary-500   mt-4 "
+                                                className="block p-2.5 w-full text-sm shadow-sm border bg-white text-black  focus:outline-none   border-gray-300   focus:ring-primary-500 focus:border-primary-500   mt-4 "
                                                 placeholder="Leave a Message..."
                                             ></textarea>
                                         </div>
                                         <div className="text-center md:mt-0 mt-5  lg:col-span-2">
-                                            <button type="submit" className="py-3 px-6 text-sm    rounded-full text-center   shadow-lg  hover:shadow-xl  bg-white hover:bg-[#f0f4ff] duration-300  text-[#014BBD]  cursor-pointer  font-semibold   " >
+                                            <button type="submit" className="py-3 px-6 text-sm   text-center   shadow-lg  hover:shadow-xl  bg-white hover:bg-[#f0f4ff] duration-300  text-[#014BBD]  cursor-pointer  font-semibold   " >
                                                 {status === 'Sending...' ? 'Submitting...' : 'Send message'}
                                             </button>
                                         </div>

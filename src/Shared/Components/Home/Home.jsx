@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import TeamMemberCard from "./TeamMemberCard";
 import KeyDates from "./KeyDates";
 import LastSection from "../Last/LastSection";
 import Invitees from "./Invitees";
-import Technical from "./Technical";
 import Marquee from "react-fast-marquee";
 import { toast } from "react-toastify";
 
@@ -52,29 +50,6 @@ export const Home = () => {
     }
   };
 
-  const team = [
-    {
-      image: '/assets/Images/members.jpg',
-      name: 'Name',
-      position: 'Position',
-    },
-    {
-      image: '/assets/Images/members.jpg',
-      name: 'Jane Smith',
-      position: 'Coordinator',
-    },
-    {
-      image: '/assets/Images/members.jpg',
-      name: 'Alex Johnson',
-      position: 'Technical Head',
-    },
-    {
-      image: '/assets/Images/members.jpg',
-      name: 'Alex',
-      position: 'Technical Head',
-    },
-  ];
-
   const invitees = [
     {
       location: 'location',
@@ -97,29 +72,6 @@ export const Home = () => {
       Position: 'Position',
     },
 
-  ];
-
-  const technical = [
-    {
-      location: 'location',
-      Name: 'Name',
-      Position: 'Position',
-    },
-    {
-      location: 'location',
-      Name: 'Name',
-      Position: 'Position',
-    },
-    {
-      location: 'location',
-      Name: 'Name',
-      Position: 'Position',
-    },
-    {
-      location: 'location',
-      Name: 'Name',
-      Position: 'Position',
-    },
   ];
 
   const date = [
@@ -158,7 +110,7 @@ export const Home = () => {
                   </h1>
                   <div className=" md:mx-0 mx-auto">
                     <Link to="/paper-submission">
-                      <button className="  bg-white hover:bg-[#f0f4ff] duration-300  font-semibold  text-[#014BBD] px-6 py-3 rounded-full cursor-pointer   ">
+                      <button className="  bg-white hover:bg-[#f0f4ff] duration-300  font-semibold  text-[#014BBD] px-6 py-3   cursor-pointer   ">
                         Register Now
                       </button>
                     </Link>
@@ -190,11 +142,10 @@ export const Home = () => {
                       <br />
                       ICTIGD provides a vibrant platform for knowledge exchange, cross-sector collaboration, and interdisciplinary exploration into how technologies like artificial intelligence, smart systems, automation, and data science can be harnessed to solve complex real-world issues and promote equitable growth.
                       <br />
-                      {/* Step into a future of purpose-driven innovation at ICTIGD, where forward-thinking minds converge to unlock the full potential of technology in shaspin a better, smarter, and more connected world. */}
                     </p>
                     <div className="md:mx-0 mx-auto">
                       <Link to="/about">
-                        <button className=" font-semibold bg-white hover:bg-[#f0f4ff] duration-300   text-[#014BBD] md:text-base text-sm   px-6 shadow-lg py-2 md:py-3 rounded-full cursor-pointer">
+                        <button className="font-semibold bg-white hover:bg-[#f0f4ff] duration-300   text-[#014BBD] md:text-base text-sm   px-6 shadow-lg py-2 md:py-3  cursor-pointer">
                           Read More
                         </button>
                       </Link>
@@ -219,11 +170,6 @@ export const Home = () => {
               <h1 className="text-center w-fit mx-auto  font-semibold lg:text-3xl text-xl p-1 bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
                 Key Dates
               </h1>
-              {/* <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-10 gap-5">
-                {date.map((item, index) => (
-                  <KeyDates key={index} Dates={item.Dates} Title={item.Title} />
-                ))}
-              </div> */}
               <div className="p-5 bg-gradient-to-tr shadow-lg   from-[#f0f4ff] to-[#e2ecfc]  " >
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-10 gap-5  ">
                   {date.map((item, index) => (
@@ -243,9 +189,7 @@ export const Home = () => {
                 Reach Us
               </h1>
               <div className=" w-full">
-                <form onSubmit={handleSubmit} className="w-full grid lg:grid-cols-2 gap-5 bg-[#1B1F3B] p-5  " style={{
-                  clipPath: 'polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px))',
-                }} ngNativeValidate>
+                <form onSubmit={handleSubmit} className="w-full grid lg:grid-cols-2 gap-5 bg-[#1B1F3B] p-5  " style={{ clipPath: 'polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px))', }} ngNativeValidate>
                   <div className="">
                     <label for="email" className="block mb-2 text-sm mt-4 ">
                       Name
@@ -253,20 +197,20 @@ export const Home = () => {
                     <input type="text" name="name" id="name"
                       value={formData.name}
                       onChange={handleChange}
-                      ngModel className="shadow-sm   border text-sm  rounded-md border-gray-300  bg-white text-black focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5  mt-4" placeholder="Enter Your Name" required />
+                      ngModel className="shadow-sm   border text-sm   border-gray-300  bg-white text-black focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5  mt-4" placeholder="Enter Your Name" required />
                   </div>
                   <div>
                     <label for="email" className="block mb-2 text-sm mt-4">
                       Email
                     </label>
-                    <input type="email" name="email" id="email" onChange={handleChange} value={formData.email} ngModel className="shadow-sm  border bg-white text-black rounded-md border-gray-300    text-sm   focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5   mt-4 "
+                    <input type="email" name="email" id="email" onChange={handleChange} value={formData.email} ngModel className="shadow-sm  border bg-white text-black   border-gray-300    text-sm   focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5   mt-4 "
                       placeholder="name@gmail.com" required />
                   </div>
                   <div>
                     <label for="email" className="block mb-2 text-sm      mt-4 "  >
                       Contact Number
                     </label>
-                    <input type="text" name="number" id="number" onChange={handleChange} value={formData.number} ngModel className="shadow-sm bg-white text-black  border rounded-md border-gray-300    text-sm   focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5   mt-4  "
+                    <input type="text" name="number" id="number" onChange={handleChange} value={formData.number} ngModel className="shadow-sm bg-white text-black  border   border-gray-300    text-sm   focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5   mt-4  "
                       placeholder="Enter Your Mobile Number" required />
                   </div>
                   <div className="lg:col-span-2 mt-4">
@@ -275,11 +219,11 @@ export const Home = () => {
                     </label>
                     <textarea id="message" name="message" value={formData.message} onChange={handleChange} ngModel
                       rows="4"
-                      className="block p-2.5 w-full text-sm shadow-sm border bg-white text-black rounded-md border-gray-300   focus:ring-primary-500 focus:border-primary-500   mt-4 "
+                      className="block p-2.5 w-full text-sm shadow-sm border bg-white text-black   border-gray-300   focus:ring-primary-500 focus:border-primary-500   mt-4 "
                       placeholder="Leave a Message..." ></textarea>
                   </div>
                   <div className="text-center md:mt-0 mt-5 lg:col-span-2">
-                    <button type="submit" className="py-3 px-6 text-sm  font-semibold rounded-full text-center   shadow-xl   bg-white hover:bg-[#f0f4ff] duration-300  text-[#014BBD]  cursor-pointer     " >
+                    <button type="submit" className="py-3 px-6 text-sm  font-semibold   text-center   shadow-xl   bg-white hover:bg-[#f0f4ff] duration-300  text-[#014BBD]  cursor-pointer     " >
                       {status === 'Sending...' ? 'Submitting...' : 'Send message'}
                     </button>
                   </div>
@@ -290,60 +234,9 @@ export const Home = () => {
           <LastSection />
         </section>
       </section >
-      {/*   <section className=" pt-10 md:pt-10 flex flex-col md:gap-10  gap-10">
-        <section className="  max-w-[70rem]   mx-auto md:px-5 px-3  flex flex-col md:gap-5 gap-3">
-          <h1 className=" text-center font-semibold lg:text-2xl text-lg">
-            Key Invitees
-          </h1>
-          <div className="grid md:grid-cols-2   grid-cols-1 md:gap-10 gap-5">
-            {invitees.map((member, index) => (
-              <Invitees key={index} Name={member.Name} Position={member.Position} location={member.location} dataAos="flip-left" />
-            ))}
-          </div>
-        </section>
-        <section className="  max-w-[100rem]  mx-auto md:px-5 px-3  flex flex-col md:gap-5  gap-3">
-          <h1 className=" text-center font-semibold lg:text-2xl text-lg">
-            Technical Program Committee
-          </h1>
-          <div className="grid 2xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 md:gap-10 gap-5">
-            {technical.map((member, index) => (
-              <Technical key={index} Name={member.Name} Position={member.Position} location={member.location} dataAos="flip-left" />
-            ))}
-          </div>
-        </section>
-        <section className="  max-w-[100rem]  mx-auto md:px-5 px-3 ">
-          <div className="  bg-[#A6D8A7] md:p-10 p-5 rounded-3xl shadow-xl  flex flex-col md:gap-5 gap-3">
-            <h1 className="text-center mx-auto font-semibold lg:text-2xl text-lg ">
-              Key Dates
-            </h1>
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-10 gap-5">
-              {date.map((item, index) => (
-                <KeyDates key={index} Dates={item.Dates} Title={item.Title} />
-              ))}
-            </div>
-          </div>
-        </section>
-        <LastSection />
-      </section> */}
-      {/* Key Invites Section */}
-      {/* <section className="flex flex-col md:gap-10 gap-5">
-            <h1 className="bg-[#F2CB51] text-[#1B1F3B] text-center rounded-full px-6 py-2 w-fit mx-auto font-semibold lg:text-2xl text-lg">
-              Key Invitees
-            </h1>
-            <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-2 md:gap-10 gap-5">
-              {team.map((member, index) => (
-                <TeamMemberCard
-                  key={index}
-                  image={member.image}
-                  name={member.name}
-                  position={member.position}
-                  dataAos="flip-left"
-                />
-              ))}
-            </div>
-          </section> */}
-      {/* Divider */}
-      {/* Venue/Contact Info */}
     </>
   );
 };
+
+
+

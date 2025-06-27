@@ -7,7 +7,7 @@ const Footer = () => {
 
       <footer className=" lg:px-3 lg:pb-3 ">
         <div className='bg-[#1B1F3B] text-white   '>
-          <div className="max-w-[92rem] mx-auto px-5 lg:py-10 py-6">
+          <div className="max-w-[90rem] mx-auto px-5 lg:py-10 py-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center md:text-left mx-auto">
                 <h3 className="text-2xl font-bold mb-2">ICTIGD</h3>

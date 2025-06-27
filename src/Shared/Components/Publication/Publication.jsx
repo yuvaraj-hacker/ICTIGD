@@ -50,9 +50,8 @@ function Publication() {
                                         <div className="  text-[#1B1F3B] font-semibold p-5 bg-gradient-to-r from-[#2487DB] to-[#014BBD] rounded-full text-sm md:text-base  whitespace-nowrap">
                                                <i className="fi fi-sr-calendar flex items-center text-white md:text-3xl text-xl"></i>
                                         </div>
-
                                         <div className="md:text-base text-sm font-medium flex flex-col gap-5">
-                                            <p className=" border-2 w-fit p-2 rounded-full md:px-5 px-3 border-[#014BBD]">{item.date}</p>
+                                            <p className=" border-2 w-fit p-2  md:px-5 px-3 border-[#014BBD]">{item.date}</p>
                                             <p className="md:text-lg "> {item.event}</p>
                                         </div>
                                     </div>
