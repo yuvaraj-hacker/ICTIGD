@@ -69,7 +69,7 @@ function About() {
               <div
                 key={index}
                 style={{
-                  clipPath: 'polygon(0 0, calc(100% - 30px) 0, 100% 30px, 100% 100%, 30px 100%, 0 calc(100% - 30px))',
+                  clipPath: 'polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px))',
                 }}
                 className="bg-white  hover:shadow-xl   shadow-md  md:p-6 p-3   transition-all duration-300"
               >
