@@ -7,7 +7,7 @@ function Other({ Title }) {
         <>
             <section className="lg:px-4">
                 <section className="relative lg:h-[30vh] w-full overflow-hidden clip  "  >
-                    <div className=" h-full w-full bg-[url('public/assets/images/Conference.jpg')] bg-center bg-cover object-center z-0 flex items-center lg:py-0 py-16 justify-center">
+                    <div className=" h-full w-full bg-[url('/assets/images/Conference.jpg')] bg-center bg-cover object-center z-0 flex items-center lg:py-0 py-16 justify-center">
                         <div className=" ">
                             <div className="absolute top-0 left-0 h-full w-full bg-gradient-to-b from-[#2487DB] to-[#014BBD] opacity-50 z-0 "></div>
                         </div>

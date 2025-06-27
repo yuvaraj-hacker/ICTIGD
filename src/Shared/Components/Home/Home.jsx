@@ -87,13 +87,13 @@ export const Home = () => {
     <>
       <section className="lg:px-3">
         <section className="relative lg:h-[70vh] w-full overflow-hidden clip  "  >
-          <div className=" h-full w-full bg-[url('public/assets/images/Conference.jpg')] bg-cover object-center z-0 flex items-center justify-center ">
+          <div className=" h-full w-full bg-[url('/assets/images/Conference.jpg')] bg-cover object-center z-0 flex items-center justify-center ">
             <div className="">
               <div className="absolute top-0 left-0 h-full w-full bg-gradient-to-b from-[#2487DB] to-[#014BBD] opacity-50 z-0 "></div>
             </div>
             <div className="relative z-10 lg:py-0 py-10  items-center flex flex-col lg:gap-7 gap-5">
               <div className=" grid grid-cols-1 lg:grid-cols-2 max-w-[80rem] mx-auto md:gap-10 gap-5 items-center md:px-8">
-                <div className="relative">
+                  <div className="relative">
                   <div className="flex  justify-center items-center lg:px-0 px-2">
                     <img src="/assets/images/herosec.jpg" alt="Conference" rel="preload" className=" z-30 lg:w-full w-96 clips" />
                   </div>
