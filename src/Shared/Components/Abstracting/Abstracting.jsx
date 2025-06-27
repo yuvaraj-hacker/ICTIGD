@@ -77,7 +77,7 @@ function Abstracting() {
                     <div className="max-w-[90rem] mx-auto w-full">
                         <div className='md:mb-5 mb-3 flex justify-center items-center gap-3'>
                             <i class="fi fi-sr-document flex items-center text-xl  text-[#014BBD] "></i>
-                            <h1 className="text-center w-fit  rounded-full font-semibold lg:text-3xl text-xl bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
+                            <h1 className="text-center w-fit  rounded-full font-semibold lg:text-3xl p-1 text-xl bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
                                 New Paper Submission
                             </h1>
                         </div>
@@ -110,7 +110,9 @@ function Abstracting() {
                             <div className="grid grid-cols-1 md:grid-cols-1 gap-6 ">
                                 {/* Submission Guidelines */}
                                 <div className=" ">
-                                    <h3 className="md:text-xl font-semibold   mb-4 flex items-center gap-2   bg-gradient-to-r from-[#2487DB] to-[#014BBD]  text-white  md:p-2 p-3 rounded-md">
+                                    <h3 className="md:text-xl font-semibold   mb-4 flex items-center gap-2   bg-gradient-to-r from-[#2487DB] to-[#014BBD]  text-white  md:p-4 p-3  " style={{
+                                        clipPath: 'polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px))',
+                                    }}>
                                         {/* <i className="fi fi-bs-check flex items-center"></i> */}
                                         Submission Guidelines :
                                     </h3>
@@ -146,7 +148,9 @@ function Abstracting() {
                                 </div>
                                 {/* Important Notes */}
                                 <div className="">
-                                    <h3 className="mb-4 flex items-center gap-2 md:text-xl font-semibold bg-gradient-to-r from-[#2487DB] to-[#014BBD]  text-white  md:p-2 p-3 rounded-md">
+                                    <h3 className="mb-4 flex items-center gap-2 md:text-xl font-semibold bg-gradient-to-r from-[#2487DB] to-[#014BBD]  text-white  md:p-4    p-3  " style={{
+                                        clipPath: 'polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px))',
+                                    }}>
                                         {/* <i className="fi fi-ts-octagon-exclamation flex items-center"></i> */}
                                         Important Notes :
                                     </h3>
@@ -169,7 +173,9 @@ function Abstracting() {
                             <section className=''>
                                 <div className="  w-full mx-auto col-span-2 ">
                                     <div className=" :bg-gray-900   ">
-                                        <div className=" mx-auto max-w-screen-xl  bg-gradient-to-tr shadow-xl   from-[#f0f4ff] to-[#e2ecfc]  md:p-6 border border-gray-200  rounded-xl      p-3 ">
+                                        <div style={{
+                                            clipPath: 'polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px))',
+                                        }} className=" mx-auto max-w-screen-xl  bg-gradient-to-tr shadow-xl   from-[#f0f4ff] to-[#e2ecfc]  md:p-6   p-3 ">
                                             <form className="w-full   grid lg:grid-cols-2 grid-cols-1 md:gap-5" ngNativeValidate onSubmit={handleSubmit}>
                                                 <div className=' '>
                                                     <label for="paperTitle" className="block mb-2 text-sm text-[#1B1F3B mt-4 ">

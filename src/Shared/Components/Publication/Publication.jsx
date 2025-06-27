@@ -11,7 +11,7 @@ function Publication() {
                 <div className=''>
                     <div className='flex items-center md:mb-5 mb-3 gap-4  text-center  mx-auto justify-center text-[#014BBD]'>
                         <i class="fi fi-rs-calendar-clock flex items-center text-xl"></i>
-                        <h1 className="text-center w-fit   rounded-full font-semibold lg:text-3xl text-xl bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
+                        <h1 className="text-center w-fit   rounded-full p-1 font-semibold lg:text-3xl text-xl bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
                             Key Dates
                         </h1>
                     </div>
@@ -42,12 +42,15 @@ function Publication() {
                                 event: "Last Date for Registration / Payment",
                             },
                         ].map((item, index) => (
-                            <div key={index} className="border relative border-[#2487DB] w-full h-full flex items-center rounded-2xl shadow-md p-5 hover:shadow-xl transition duration-300 bg-white/80 backdrop-blur-sm"  >
+                            <div key={index}  style={{
+                                    clipPath: 'polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px))',
+                                }} className="  relative   w-full h-full flex items-center   shadow-md p-5 hover:shadow-xl transition duration-300 bg-white/80 backdrop-blur-sm"  >
                                 <section className="  ">
                                     <div className="flex items-center gap-5 z-10 relative  h-full ">
                                         <div className="  text-[#1B1F3B] font-semibold p-5 bg-gradient-to-r from-[#2487DB] to-[#014BBD] rounded-full text-sm md:text-base  whitespace-nowrap">
-                                            <i className="fi fi-sr-calendar flex items-center text-white md:text-3xl text-xl"></i>
+                                               <i className="fi fi-sr-calendar flex items-center text-white md:text-3xl text-xl"></i>
                                         </div>
+
                                         <div className="md:text-base text-sm font-medium flex flex-col gap-5">
                                             <p className=" border-2 w-fit p-2 rounded-full md:px-5 px-3 border-[#014BBD]">{item.date}</p>
                                             <p className="md:text-lg "> {item.event}</p>
@@ -62,18 +65,17 @@ function Publication() {
                 <div className=''>
                     <div className='flex items-center gap-3 md:mb-5 mb-3 justify-center text-[#014BBD]'>
                         <i class="fi fi-sr-registration-paper flex items-center text-xl"></i>
-                        <h1 className="text-center w-fit   rounded-full font-semibold lg:text-3xl text-xl bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
+                        <h1 className="text-center w-fit  p-1  rounded-full font-semibold lg:text-3xl text-xl bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
                             Registration Details
                         </h1>
                     </div>
-                    <div className="max-w-[80rem] mx-auto bg-gradient-to-tr from-[#f0f4ff] to-[#e2ecfc] rounded-2xl shadow-xl p-6">
+                    <div className="max-w-[80rem] mx-auto bg-gradient-to-tr from-[#f0f4ff] to-[#e2ecfc]   shadow-xl p-6">
                         <h2 className="md:text-2xl font-bold  mb-6 flex items-center gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6  " fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 10h18M4 6h16M4 14h16M4 18h16" />
                             </svg>
                             Bank Account Information
                         </h2>
-
                         <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 mb-8">
                             {[
                                 { label: 'Account Name', value: 'XXXXXXXX' },
@@ -82,15 +84,19 @@ function Publication() {
                                 { label: 'IFSC Code', value: 'XXXXXXXX' },
                                 { label: 'MICR', value: 'XXXXXXXX' },
                             ].map((item, idx) => (
-                                <div key={idx} className="bg-white p-4 rounded-xl ">
-                                    <p className="text-gray-500 text-sm font-medium">{item.label}</p>
+                                <div key={idx} className="bg-white p-4   "  style={{
+                                    clipPath: 'polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px))',
+                                }}>
+                                      <p className="text-gray-500 text-sm font-medium">{item.label}</p>
                                     <p className="text-gray-900 font-semibold mt-1">{item.value}</p>
                                 </div>
                             ))}
                         </div>
 
                         {/* Payment Instructions */}
-                        <div className="bg-white p-6 rounded-xl shadow-md border border-blue-100">
+                        <div className="bg-white p-6   shadow-md "  style={{
+                                    clipPath: 'polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px))',
+                                }}>
                             <h3 className="text-xl font-semibold   mb-4 border-b pb-2">
                                 Payment Instructions
                             </h3>
@@ -113,9 +119,7 @@ function Publication() {
                             </ul>
                         </div>
                     </div>
-
                 </div>
-
             </section>
             <LastSection />
 

@@ -135,15 +135,15 @@ export const Home = () => {
     <>
       <section className="lg:px-3">
         <section className="relative lg:h-[70vh] w-full overflow-hidden clip  "  >
-          <div className=" h-full w-full bg-[url('public/assets/images/Conference.jpg')] bg-cover object-center z-0 flex items-center ">
+          <div className=" h-full w-full bg-[url('public/assets/images/Conference.jpg')] bg-cover object-center z-0 flex items-center justify-center ">
             <div className="">
               <div className="absolute top-0 left-0 h-full w-full bg-gradient-to-b from-[#2487DB] to-[#014BBD] opacity-50 z-0 "></div>
             </div>
             <div className="relative z-10 lg:py-0 py-10  items-center flex flex-col lg:gap-7 gap-5">
-              <div className=" grid grid-cols-1 lg:grid-cols-2 max-w-[80rem] md:gap-10 gap-5 items-center md:px-8">
+              <div className=" grid grid-cols-1 lg:grid-cols-2 max-w-[80rem] mx-auto md:gap-10 gap-5 items-center md:px-8">
                 <div className="relative">
                   <div className="flex  justify-center items-center lg:px-0 px-2">
-                    <img src="/assets/images/herosec.jpg" alt="Conference" rel="preload" className=" z-30 lg:w-full w-96" />
+                    <img src="/assets/images/herosec.jpg" alt="Conference" rel="preload" className=" z-30 lg:w-full w-96 clips" />
                   </div>
                   <div className="mx-auto lg:w-full w-96  border-2 border-[#014BBD] lg:block hidden  h-full absolute bg-white -top-1 -left-1 z-20 ">
                   </div>
@@ -158,14 +158,14 @@ export const Home = () => {
                   </h1>
                   <div className=" md:mx-0 mx-auto">
                     <Link to="/paper-submission">
-                      <button className="  bg-white  font-semibold  text-[#014BBD] px-6 py-3 rounded-full cursor-pointer  hover:scale-95 duration-300  ">
+                      <button className="  bg-white   font-semibold  text-[#014BBD] px-6 py-3 rounded-full cursor-pointer  hover:scale-95 duration-300  ">
                         Register Now
                       </button>
                     </Link>
                   </div>
                 </div>
               </div>
-              <div className="  w-full z-10 text-black bg-white md:py-4 py-2 border-y-4 border-[#014BBD] overflow-hidden ">
+              <div className="  max-w-[110rem] mx-auto z-10 text-black bg-white md:py-4 py-2 border-y-4 border-[#014BBD] overflow-hidden ">
                 <Marquee pauseOnHover>
                   <p className="bg-gradient-to-r  overflow-hidden from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent font-bold md:text-xl"> TECH INTEGRATION 2025 <span className="animate-spin inline-block text-[#014BBD]"> ✦ </span> GLOBAL DEVELOPMENT SUMMIT <span className="animate-spin inline-block text-[#014BBD]"> ✦ </span> ICT FOR GLOBAL CHANGE <span className="animate-spin inline-block text-[#014BBD]"> ✦ </span> INTERNATIONAL TECH SUMMIT <span className="animate-spin inline-block text-[#014BBD]"> ✦ </span> AUGUST 22–24, 2025  <span className="animate-spin inline-block text-[#014BBD]"> ✦ </span>  </p>
                 </Marquee>
@@ -178,7 +178,7 @@ export const Home = () => {
         <section className="max-w-[80rem] pt-7 md:pt-10 mx-auto md:px-5 px-3 flex flex-col md:gap-10 gap-7">
           <section className="grid md:grid-cols-1 grid-cols-1 md:gap-5 gap-3 items-start">
             <div className='flex flex-col md:gap-7 gap-3'>
-              <h1 className="text-center w-fit mx-auto rounded-full font-semibold lg:text-3xl text-xl bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
+              <h1 className="text-center w-fit mx-auto rounded-full font-semibold lg:text-3xl text-xl bg-gradient-to-r p-1 from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
                 About Us
               </h1>
               <div className="grid lg:grid-cols-2 md:gap-10 gap-5 items-center">
@@ -205,10 +205,10 @@ export const Home = () => {
             </div>
           </section>
           <section className="  max-w-[80rem]   mx-auto  flex flex-col md:gap-7 gap-3">
-            <h1 className="text-center w-fit mx-auto rounded-full font-semibold lg:text-3xl text-xl bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
+            <h1 className="text-center w-fit mx-auto rounded-full font-semibold lg:text-3xl text-xl p-1 bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
               Key Invitees
             </h1>
-            <div className="grid md:grid-cols-4   grid-cols-1 md:gap-10 gap-5">
+            <div className="grid md:grid-cols-4 grid-cols-1 md:gap-10 gap-5">
               {invitees.map((member, index) => (
                 <Invitees key={index} Name={member.Name} Position={member.Position} location={member.location} dataAos="flip-left" />
               ))}
@@ -216,7 +216,7 @@ export const Home = () => {
           </section>
           <section className="  max-w-[80rem]  mx-auto  ">
             <div className="  flex flex-col md:gap-7 gap-3">
-              <h1 className="text-center w-fit mx-auto  font-semibold lg:text-3xl text-xl bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
+              <h1 className="text-center w-fit mx-auto  font-semibold lg:text-3xl text-xl p-1 bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
                 Key Dates
               </h1>
               {/* <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-10 gap-5">
@@ -224,10 +224,12 @@ export const Home = () => {
                   <KeyDates key={index} Dates={item.Dates} Title={item.Title} />
                 ))}
               </div> */}
-              <div className="p-5 bg-gradient-to-tr shadow-lg   from-[#f0f4ff] to-[#e2ecfc] rounded-xl">
+              <div className="p-5 bg-gradient-to-tr shadow-lg   from-[#f0f4ff] to-[#e2ecfc]  " >
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-10 gap-5  ">
                   {date.map((item, index) => (
-                    <div key={index} className="  w-full h-full flex items-center rounded-2xl   p-5 hover:shadow-xl transition duration-300 bg-white/80 backdrop-blur-sm"  >
+                    <div key={index} style={{
+                      clipPath: 'polygon(0 0, calc(100% - 30px) 0, 100% 30px, 100% 100%, 30px 100%, 0 calc(100% - 30px))',
+                    }} className="  w-full h-full flex items-center     p-5 hover:shadow-xl transition duration-300 bg-white/80 backdrop-blur-sm"  >
                       <KeyDates Dates={item.Dates} Title={item.Title} />
                     </div>
                   ))}
@@ -237,11 +239,13 @@ export const Home = () => {
           </section>
           <section className="max-w-[100rem]  mx-auto   lg:w-1/2 w-full text-white">
             <div className=" flex flex-col md:gap-7 gap-3">
-              <h1 className="text-center w-fit mx-auto font-semibold lg:text-3xl text-xl bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
+              <h1 className="text-center w-fit mx-auto font-semibold lg:text-3xl text-xl bg-gradient-to-r p-1 from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
                 Reach Us
               </h1>
               <div className=" w-full">
-                <form onSubmit={handleSubmit} className="w-full grid lg:grid-cols-2 gap-5 bg-[#1B1F3B] p-5 rounded-xl" ngNativeValidate>
+                <form onSubmit={handleSubmit} className="w-full grid lg:grid-cols-2 gap-5 bg-[#1B1F3B] p-5  " style={{
+                  clipPath: 'polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px))',
+                }} ngNativeValidate>
                   <div className="">
                     <label for="email" className="block mb-2 text-sm mt-4 ">
                       Name

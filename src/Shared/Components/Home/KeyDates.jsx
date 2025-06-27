@@ -21,7 +21,7 @@ import React from 'react';
 
 function KeyDates({ Dates, Title }) {
     return (
-        <section className="relative  ">
+        <section className="relative  " >
             <div className="flex items-center gap-5 z-10 relative  h-full ">
                 <div className="  text-[#1B1F3B] font-semibold p-5 bg-gradient-to-r from-[#2487DB] to-[#014BBD] rounded-full text-sm md:text-base  whitespace-nowrap">
                     <i className="fi fi-sr-calendar flex items-center text-white md:text-3xl text-xl"></i>

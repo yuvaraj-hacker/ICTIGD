@@ -19,7 +19,7 @@ function EditorialBoard({ position, Name, location }) {
             <Other Title="Organizing Committee" />
             <section className="flex flex-col md:gap-5 gap-3 max-w-[80rem]  2xl:px-0 px-3 mx-auto  md:py-10 py-5" >
                 <div className='flex flex-col gap-3 '>
-                    <h1 className="text-center w-fit mx-auto rounded-full font-semibold lg:text-3xl text-xl bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
+                    <h1 className="text-center w-fit mx-auto rounded-full p-1 font-semibold lg:text-3xl text-xl bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
                         Committee Members
                     </h1>
                 </div>

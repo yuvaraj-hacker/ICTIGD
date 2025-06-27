@@ -17,8 +17,8 @@ function About() {
       <Other Title="About the Conference" />
       <section className="flex flex-col  md:gap-10 gap-5  max-w-[80rem]  md:py-10 py-5 mx-auto md:px-5 px-3   ">
         <section className="grid md:grid-cols-2 grid-cols-1 md:gap-5 gap-3 items-center">
-          <div className="rounded-xl overflow-hidden">
-              <img className="h-64 sm:h-80 w-full object-cover" style={{ clipPath: 'polygon(0 0, calc(100% - 60px) 0, 100% 60px, 100% 100%, 60px 100%, 0 calc(100% - 60px))' }} rel="preload" src="/assets/images/aboutus.jpg" alt="Conference Visual" />
+          <div className="  overflow-hidden">
+            <img className="h-64 sm:h-80 w-full object-cover" style={{ clipPath: 'polygon(0 0, calc(100% - 60px) 0, 100% 60px, 100% 100%, 60px 100%, 0 calc(100% - 60px))' }} rel="preload" src="/assets/images/aboutus.jpg" alt="Conference Visual" />
           </div>
           <div className=' flex flex-col md:gap-5 gap-3'>
             {/* <h1 className=" text-center font-semibold  lg:text-2xl text-lg">
@@ -38,7 +38,7 @@ function About() {
             {/* <h1 className="   font-semibold  lg:text-2xl text-lg">
               Vision
             </h1> */}
-            <h1 className="text-center w-fit mx-auto rounded-full font-semibold lg:text-3xl text-xl bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
+            <h1 className="text-center w-fit mx-auto rounded-full font-semibold p-1 lg:text-3xl text-xl bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
               Vision
             </h1>
             <p className='leading-7 md:text-lg text-sm'>
@@ -48,10 +48,10 @@ function About() {
         </section>
         <section className=" text-left">
           <div className="mx-auto text-justify  space-y-4 text-sm md:text-base leading-7">
-            <h1 className="text-center w-fit mx-auto rounded-full font-semibold lg:text-3xl text-xl bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
+            <h1 className="text-center w-fit mx-auto rounded-full font-semibold p-1 lg:text-3xl text-xl bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
               Objectives
             </h1>
-            <ul className='list-disc ml-5 md:text-lg text-sm'>
+            <ul className='list-disc ml-5 md:text-lg text-sm leading-7'>
               <li>To explore the role of emerging technologies in driving socio-economic development.</li>
               <li>To promote collaborative research between academia, industry, and government institutions.</li>
               <li>To highlight successful models of technology-led transformation in sectors such as healthcare, education, agriculture, smart cities, and the environment.</li>
@@ -61,14 +61,17 @@ function About() {
           </div>
         </section>
         <section className="  ">
-          <h1 className="text-center w-fit mx-auto mb-5 rounded-full font-semibold lg:text-3xl text-xl bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
+          <h1 className="text-center w-fit mx-auto mb-5 rounded-full font-semibold p-1 lg:text-3xl text-xl bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
             Who Should Attend
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-[80rem] mx-auto  gap-6">
             {attendees.map((item, index) => (
               <div
                 key={index}
-                className="bg-white border border-gray-200 shadow-md rounded-2xl md:p-6 p-3 hover:shadow-lg transition-all duration-300"
+                style={{
+                  clipPath: 'polygon(0 0, calc(100% - 30px) 0, 100% 30px, 100% 100%, 30px 100%, 0 calc(100% - 30px))',
+                }}
+                className="bg-white  hover:shadow-xl   shadow-md  md:p-6 p-3   transition-all duration-300"
               >
                 {/* <div className="text-xl font-semibold text-[#2487DB] mb-2">•</div> */}
                 <p className="text-gray-800 md:text-lg text-sm font-medium text-center">{item}</p>
@@ -76,10 +79,7 @@ function About() {
             ))}
           </div>
         </section>
-
       </section>
-
-
       <LastSection />
 
     </>

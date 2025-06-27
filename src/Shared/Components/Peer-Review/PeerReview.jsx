@@ -9,7 +9,7 @@ function PeerReview() {
             <Other Title="Conference Tracks" />
             <section className="flex flex-col md:gap-5 gap-3 max-w-[80rem] py-5 md:py-10  mx-auto 2xl:px-0 px-3">
                 {/* <h2 className="md:text-2xl text-xl font-bold  md:mb-2">📌 Why These Tracks Matter</h2> */}
-                <h1 className="text-center w-fit mx-auto rounded-full font-semibold lg:text-3xl text-xl bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
+                <h1 className="text-center w-fit mx-auto rounded-full font-semibold p-1 lg:text-3xl text-xl bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
                     📌 Why These Tracks Matter
                 </h1>
                 <p className="md:text-lg text-sm   leading-relaxed">
@@ -72,7 +72,9 @@ function PeerReview() {
                         }
                     ].map((track, index) => (
                         <>
-                            <div key={index} className="group flex items-start gap-4 bg-white rounded-2xl border border-[#2487DB]  shadow-md md:p-6 p-4   hover:shadow-lg transition duration-300"  >
+                            <div key={index}  style={{
+                                    clipPath: 'polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px))',
+                                }} className="group flex items-start gap-4 bg-white     shadow-md md:p-6 p-4   hover:shadow-lg transition duration-300"  >
                                 <div className="flex-1">
                                     <h3 className="text-gray-800 font-bold md:text-lg text-base  transition-colors">
                                         {track.title}

@@ -59,13 +59,16 @@ function Contact() {
                         <div className="lg:max-w-3xl max-w-xl w-full mx-auto ">
                             <div className="  :bg-gray-900 lg:px-20 md:px-5 ">
                                 <div className=' text-center mx-auto flex justify-center md:mb-5 mb-3 '>
-                                    <h1 className="text-center w-fit mx-auto rounded-full font-semibold lg:text-3xl text-xl bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
+                                    <h1 className="text-center w-fit mx-auto rounded-full font-semibold p-1 lg:text-3xl text-xl bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
                                         Reach Us
                                     </h1>
                                 </div>
-                                <div className="mx-auto max-w-screen-md relative  ">
+                                <div className="mx-auto max-w-screen-md relative">
                                     {/* <div className="absolute top-0 right-0 w-20 h-20 bg-[#269C52] rounded-bl-full transform translate-x-6 -translate-y-6 -hover:scale-110 transition-transform duration-500"></div> */}
-                                    <form onSubmit={handleSubmit} className="w-full grid lg:grid-cols-2 gap-5 bg-gradient-to-tr shadow-xl   from-[#f0f4ff] to-[#e2ecfc] rounded-2xl  p-5 " ngNativeValidate>
+                                    <form onSubmit={handleSubmit} className="w-full grid lg:grid-cols-2 gap-5 bg-gradient-to-tr shadow-xl   from-[#f0f4ff] to-[#e2ecfc]   p-5 "
+                                    style={{
+                                        clipPath: 'polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px))',
+                                    }} ngNativeValidate>
                                         <div className="">
                                             <label for="email" className="block mb-2 text-sm mt-4   ">
                                                 Name
