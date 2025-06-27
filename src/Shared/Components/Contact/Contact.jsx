@@ -94,14 +94,7 @@ function Contact() {
                                             <label for="message" className="block mb-2 text-sm   ">
                                                 Your Message
                                             </label>
-                                            <textarea id="message" name="message"
-                                                value={formData.message}
-                                                onChange={handleChange}
-                                                ngModel
-                                                rows="4"
-                                                className="block p-2.5 w-full text-sm shadow-sm border bg-white text-black  focus:outline-none   border-gray-300   focus:ring-primary-500 focus:border-primary-500   mt-4 "
-                                                placeholder="Leave a Message..."
-                                            ></textarea>
+                                            <textarea id="message" name="message" value={formData.message} onChange={handleChange} ngModel rows="4" className="block p-2.5 w-full text-sm shadow-sm border bg-white text-black  focus:outline-none   border-gray-300   focus:ring-primary-500 focus:border-primary-500   mt-4 " placeholder="Leave a Message..." ></textarea>
                                         </div>
                                         <div className="text-center md:mt-0 mt-5  lg:col-span-2">
                                             <button type="submit" className="py-3 px-6 text-sm   text-center   shadow-lg  hover:shadow-xl  bg-white hover:bg-[#f0f4ff] duration-300  text-[#014BBD]  cursor-pointer  font-semibold   " >
@@ -115,7 +108,6 @@ function Contact() {
                     </div>
                 </div>
             </section>
-
             <Contct />
         </>
     )

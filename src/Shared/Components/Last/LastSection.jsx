@@ -39,7 +39,7 @@ function LastSection() {
                             </div>
                             <div className='w-fit mx-auto'>
                                 <Link to="/paper-submission">
-                                    <div className=" bg-white hover:bg-[#f0f4ff]     py-3 w-fit text-[#014BBD] px-6 mx-auto cursor-pointer font-semibold shadow-md    group duration-300 md:text-base text-sm">
+                                    <div className=" bg-white hover:bg-[#f0f4ff] py-3 w-fit text-[#014BBD] px-6 mx-auto cursor-pointer font-semibold shadow-md    group duration-300 md:text-base text-sm">
                                         <p className=""> Register Now</p>
                                     </div>
                                 </Link>
