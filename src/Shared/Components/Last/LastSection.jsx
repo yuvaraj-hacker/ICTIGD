@@ -14,8 +14,8 @@ function LastSection() {
                                         <i className="fi fi-rs-land-layer-location text-white flex items-center text-2xl md:text-2xl " />
                                     </div>
                                     <div className="md:text-lg text-sm text-white" >
-                                        <p>International Convention Center</p>
-                                        <p>Chennai, India</p>
+                                        {/* <p>International Convention Center</p> */}
+                                        <p>Beijing, China</p>
                                     </div>
                                 </div>
                                 <div className="text-center flex md:flex-row flex-col  items-center md:gap-4 gap-2 mx-auto  ">

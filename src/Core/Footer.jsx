@@ -33,7 +33,7 @@ const Footer = () => {
                 <h4 className="text-lg font-semibold mb-2">Contact</h4>
                 <ul className="space-y-1 text-sm">
                   <li>Email: <a href="mailto:info.ictigd@gmail.com" className="underline">info.ictigd@gmail.com</a></li>
-                  <li>Location: Chennai, India</li>
+                  <li>Location: Beijing, China</li>
                 </ul>
               </div>
             </div>
