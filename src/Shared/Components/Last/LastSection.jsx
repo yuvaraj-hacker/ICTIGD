@@ -5,7 +5,7 @@ function LastSection() {
     return (
         <>
             <section className='px-3 '>
-                <section className="w-full max-w-[80rem] py-7 md:py-10 mx-auto   bg-cover flex justify-center items-center bg-gradient-to-r from-[#2487DB] to-[#014BBD] lg:mb-10 mb-5  p-5 md:p-10" style={{ clipPath: 'polygon(0 0, calc(100% - 60px) 0, 100% 60px, 100% 100%, 60px 100%, 0 calc(100% - 60px))' }}>
+                <section className="w-full max-w-[80rem] py-7 md:py-10 mx-auto   bg-cover flex justify-center items-center bg-gradient-to-r from-[#2487DB] to-[#014BBD] lg:mb-10 mb-5  p-5 md:p-10" style={{ clipPath: 'polygon(0 0, calc(100% - 40px) 0, 100% 40px, 100% 100%, 40px 100%, 0 calc(100% - 40px))' }}>
                     <div className=" max-w-[100rem]  md:mx-auto mx-0     ">
                         <section className=" flex flex-col gap-10 ">
                             <div className="grid lg:grid-cols-3 grid-cols-1 gap-5 md:gap-10">
