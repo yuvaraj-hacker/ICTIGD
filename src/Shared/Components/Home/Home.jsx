@@ -75,12 +75,12 @@ export const Home = () => {
   ];
 
   const date = [
-    { Dates: '22-07-2025', Title: 'Full Paper Submission Deadline' },
-    { Dates: '29-07-2025', Title: 'Notification of Decision' },
-    { Dates: '05-08-2025', Title: 'Deadline for Submitting Revised Full Paper' },
-    { Dates: '12-08-2025', Title: 'Notification of Acceptance' },
-    { Dates: '19-08-2025', Title: 'Camera-Ready Paper Submission' },
-    { Dates: '26-08-2025', Title: 'Last Date for Registration / Payment' },
+    { Dates: '07-06-2025', Title: 'Full Paper Submission Deadline' },
+    // { Dates: '29-07-2025', Title: 'Notification of Decision' },
+    // { Dates: '05-08-2025', Title: 'Deadline for Submitting Revised Full Paper' },
+    { Dates: '18-06-2025', Title: 'Notification of Acceptance' },
+    { Dates: '21-06-2025', Title: 'Final Paper Submission' },
+    // { Dates: '26-08-2025', Title: 'Last Date for Registration' },
   ];
 
   return (
@@ -93,7 +93,7 @@ export const Home = () => {
             </div>
             <div className="relative z-10 lg:py-0 py-10  items-center flex flex-col lg:gap-7 gap-5">
               <div className=" grid grid-cols-1 lg:grid-cols-2 max-w-[80rem] mx-auto md:gap-10 gap-5 items-center md:px-8">
-                  <div className="relative">
+                <div className="relative">
                   <div className="flex  justify-center items-center lg:px-0 px-2">
                     <img src="/assets/images/herosec.jpg" alt="Conference" rel="preload" className=" z-30 lg:w-full w-96 clips" />
                   </div>
@@ -155,7 +155,27 @@ export const Home = () => {
               </div>
             </div>
           </section>
-          <section className="max-w-[80rem] mx-auto flex flex-col md:gap-7 gap-3">
+          <section className="grid md:grid-cols-1 grid-cols-1 md:gap-5 gap-3 items-start">
+            <div className='flex flex-col md:gap-7 gap-3'>
+              <h1 className="text-center w-fit mx-auto rounded-full font-semibold lg:text-3xl text-xl bg-gradient-to-r p-1 from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
+                Our Mission
+              </h1>
+              <div className="grid lg:grid-cols-1 md:gap-10 gap-5 items-center">
+                <div>
+                  <div className="flex flex-col gap-3">
+                    <p className="text-justify md:text-lg text-sm leading-7">
+                      The mission of the International Conference on Technology Integration for Global Development is to foster global collaboration and innovation through the effective integration of emerging technologies. We aim to provide a dynamic platform for researchers, practitioners, policymakers, and industry leaders to share knowledge, explore solutions, and drive sustainable development across all regions. By bridging the gap between technology and global needs, the conference aspires to inspire impactful research and practical applications that address the world’s most pressing social, economic, and environmental challenges.
+                    </p>
+                    <p className="text-justify md:text-lg text-sm leading-7">
+                      This conference also encourages interdisciplinary dialogue and the exchange of best practices that empower communities, enhance education, promote digital inclusion, and support economic growth. We are committed to nurturing a global network of innovators and changemakers who are dedicated to leveraging technology for the greater good of humanity.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+          {/* <section className="max-w-[80rem] mx-auto flex flex-col md:gap-7 gap-3">
             <h1 className="text-center w-fit mx-auto rounded-full font-semibold lg:text-3xl text-xl p-1 bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
               Key Invitees
             </h1>
@@ -164,7 +184,7 @@ export const Home = () => {
                 <Invitees key={index} Name={member.Name} Position={member.Position} location={member.location} dataAos="flip-left" />
               ))}
             </div>
-          </section>
+          </section> */}
           <section className="  max-w-[80rem]  mx-auto  ">
             <div className="  flex flex-col md:gap-7 gap-3">
               <h1 className="text-center w-fit mx-auto  font-semibold lg:text-3xl text-xl p-1 bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">

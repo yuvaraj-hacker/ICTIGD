@@ -14,7 +14,7 @@ function Contct() {
                                     </div>
                                     <div className="md:text-lg text-sm text-white">
                                         {/* <p>International Convention Center</p> */}
-                                        <p>Beijing , China</p>
+                                        <p>Chiang Mai, Thailand</p>
                                     </div>
                                 </div>
                                 <div className="text-center flex md:flex-row flex-col  items-center md:gap-4 gap-2 mx-auto">
@@ -22,7 +22,7 @@ function Contct() {
                                         <i className="fi fi-rr-clock text-white flex items-center text-2xl md:text-2xl " />
                                     </div>
                                     <div className="md:text-lg text-sm text-white">
-                                        <p>September 26-27, 2025</p>
+                                        <p>June 30, 2025</p>
                                         <p>9:00 AM - 6:00 PM</p>
                                     </div>
                                 </div>
@@ -32,7 +32,7 @@ function Contct() {
                                     </div>
                                     <div className="md:text-lg text-sm text-white">
                                         <p>info.ictigd@gmail.com</p>
-                                        <p>Chennai, India</p>
+                                        {/* <p>Chiang Mai, Thailand</p> */}
                                     </div>
                                 </div>
                             </div>

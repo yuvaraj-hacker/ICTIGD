@@ -3,44 +3,47 @@ import { Link } from 'react-router-dom'
 import LastSection from '../Last/LastSection'
 import Other from '../Other/Other'
 
-function Publication() {
+function    Publication() {
     return (
         <>
-            <Other Title="Key Dates and Registration Details" />
+            <Other Title="Key Dates" />
             <section className="flex flex-col md:gap-10 gap-5   max-w-[80rem] py-5 md:py-10  mx-auto 2xl:px-0 px-3">
                 <div className=''>
                     <div className='flex items-center md:mb-5 mb-3 gap-4  text-center  mx-auto justify-center text-[#014BBD]'>
                         <i class="fi fi-rs-calendar-clock flex items-center text-xl"></i>
                         <h1 className="text-center w-fit   rounded-full p-1 font-semibold lg:text-3xl text-xl bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
-                            Key Dates
+                            Important Dates
                         </h1>
+
                     </div>
+                    <p className=" mb-10 text-center">We encourage all participants, authors, and attendees to carefully review and adhere to the key dates associated with the International Conference on Technology Integration for Global Development. These important deadlines include paper submission, acceptance notifications, registration windows, and the final conference schedule. Staying aligned with these dates ensures a smooth and well-coordinated participation experience. We recommend marking your calendars early and completing all necessary steps on or before the stated deadlines to guarantee your involvement in this global event.
+                    </p>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6  max-w-7xl mx-auto">
                         {[
                             {
-                                date: "22-07-2025",
+                                date: "07-06-2025",
                                 event: "Full Paper Submission Deadline",
                             },
+                            // {
+                            //     date: "29-07-2025",
+                            //     event: "Notification of Decision",
+                            // },
+                            // {
+                            //     date: "05-08-2025",
+                            //     event: "Deadline for Submitting Revised Full Paper",
+                            // },
                             {
-                                date: "29-07-2025",
-                                event: "Notification of Decision",
-                            },
-                            {
-                                date: "05-08-2025",
-                                event: "Deadline for Submitting Revised Full Paper",
-                            },
-                            {
-                                date: "12-08-2025",
+                                date: "18-06-2025",
                                 event: "Notification of Acceptance",
                             },
                             {
-                                date: "19-08-2025",
-                                event: "Camera-Ready Paper Submission",
+                                date: "21-06-2025",
+                                event: "Final Paper Submission",
                             },
-                            {
-                                date: "26-08-2025",
-                                event: "Last Date for Registration / Payment",
-                            },
+                            // {
+                            //     date: "26-08-2025",
+                            //     event: "Last Date for Registration",
+                            // },
                         ].map((item, index) => (
                             <div key={index} style={{
                                 clipPath: 'polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px))',
@@ -61,62 +64,7 @@ function Publication() {
                         ))}
                     </div>
                 </div>
-                <div className=''>
-                    <div className='flex items-center gap-3 md:mb-5 mb-3 justify-center text-[#014BBD]'>
-                        <i class="fi fi-sr-registration-paper flex items-center text-xl"></i>
-                        <h1 className="text-center w-fit  p-1  rounded-full font-semibold lg:text-3xl text-xl bg-gradient-to-r from-[#2487DB] to-[#014BBD] bg-clip-text text-transparent">
-                            Registration Details
-                        </h1>
-                    </div>
-                    <div className="max-w-[80rem] mx-auto bg-gradient-to-tr from-[#f0f4ff] to-[#e2ecfc]   shadow-xl md:p-6 p-3">
-                        <h2 className="md:text-2xl font-bold  mb-6 flex items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6  " fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 10h18M4 6h16M4 14h16M4 18h16" />
-                            </svg>
-                            Bank Account Information
-                        </h2>
-                        <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 mb-8">
-                            {[
-                                { label: 'Account Name', value: 'XXXXXXXX' },
-                                { label: 'Account Number', value: 'XXXXXXXX' },
-                                { label: 'Branch', value: 'XXXXXXXX' },
-                                { label: 'IFSC Code', value: 'XXXXXXXX' },
-                                { label: 'MICR', value: 'XXXXXXXX' },
-                            ].map((item, idx) => (
-                                <div key={idx} className="bg-white p-4   " style={{
-                                    clipPath: 'polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px))',
-                                }}>
-                                    <p className="text-gray-500 text-sm font-medium">{item.label}</p>
-                                    <p className="text-gray-900 font-semibold mt-1">{item.value}</p>
-                                </div>
-                            ))}
-                        </div>
 
-                        {/* Payment Instructions */}
-                        <div className="bg-white p-6   shadow-md " style={{ clipPath: 'polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px))', }}>
-                            <h3 className="text-xl font-semibold   mb-4 border-b pb-2">
-                                Payment Instructions
-                            </h3>
-                            <ul className="list-inside list-disc space-y-3 text-gray-800 leading-relaxed">
-                                <li>
-                                    <span className="font-medium">Register only after your article is accepted.</span>
-                                </li>
-                                <li>
-                                    Payment methods: <span className="font-semibold text-blue-800">NEFT / IMPS</span> or <span className="font-semibold text-blue-800">Cash Deposit</span>.
-                                </li>
-                                <li>
-                                    After payment, send <span className="italic">screenshot / reference no. / transaction ID / counter slip</span> with your paper ID.
-                                </li>
-                                <li>
-                                    <span className="font-semibold">At least one author</span> of each accepted paper must register and attend.
-                                </li>
-                                <li>
-                                    Selected abstracts will be published in the conference proceedings with an <span className="font-semibold">ISBN</span>.
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
             </section>
             <LastSection />
 
