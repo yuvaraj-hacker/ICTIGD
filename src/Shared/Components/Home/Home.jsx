@@ -97,11 +97,11 @@ export const Home = () => {
                   <div className="flex  justify-center items-center lg:px-0 px-2">
                     <img src="/assets/images/herosec.jpg" alt="Conference" rel="preload" className=" z-30 lg:w-full w-96 clips" />
                   </div>
-                  <div className="mx-auto lg:w-full w-96  border-2 border-[#014BBD] lg:block hidden  h-full absolute bg-white -top-1 -left-1 z-20 ">
+                  <div className="mx-auto lg:w-full w-96  border-2 border-[#014BBD] 2xl:block hidden  h-full absolute bg-white -top-1 -left-1 z-20 ">
                   </div>
-                  <div className="mx-auto lg:w-full w-96  border-2 border-[#014BBD]  lg:block hidden h-full absolute bg-white -top-2 -left-2 z-10 ">
+                  <div className="mx-auto lg:w-full w-96  border-2 border-[#014BBD]  2xl:block hidden h-full absolute bg-white -top-2 -left-2 z-10 ">
                   </div>
-                  <div className="mx-auto lg:w-full w-96  border-2 border-[#014BBD]  lg:block hidden  h-full absolute bg-white -top-3 -left-3 ">
+                  <div className="mx-auto lg:w-full w-96  border-2 border-[#014BBD]  2xl:block hidden  h-full absolute bg-white -top-3 -left-3 ">
                   </div>
                 </div>
                 <div className="lg:ml-auto mx-auto flex flex-col gap-6">
