@@ -138,7 +138,7 @@ export const Home = () => {
                 <div>
                   <div className=" flex flex-col gap-3 ">
                     <p className="text-justify md:text-lg text-sm leading-7">
-                      Join us at the <strong>International Conference on Technology Integration for Global Development (ICTIGD)</strong> — a global forum committed to driving innovation through the integration of emerging technologies for sustainable and inclusive progress. This prestigious event brings together researchers, scholars, industry professionals, and students to share breakthroughs, discuss transformative trends, and present practical solutions that leverage technology for global development challenges.
+                      Join us at the <strong>International Conference on Technology Integration for Global Development</strong> — a global forum committed to driving innovation through the integration of emerging technologies for sustainable and inclusive progress. This prestigious event brings together researchers, scholars, industry professionals, and students to share breakthroughs, discuss transformative trends, and present practical solutions that leverage technology for global development challenges.
                       <br />
                       ICTIGD provides a vibrant platform for knowledge exchange, cross-sector collaboration, and interdisciplinary exploration into how technologies like artificial intelligence, smart systems, automation, and data science can be harnessed to solve complex real-world issues and promote equitable growth.
                       <br />

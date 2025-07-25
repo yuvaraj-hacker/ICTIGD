@@ -29,7 +29,7 @@ function About() {
                 The International Conference on Big Data and Cloud Computing (ICBDCC) serves as a premier global platform for researchers, academicians, industry practitioners, and students to exchange ideas, innovations, and research outcomes in the fields of Big Data, Cloud Computing, and their emerging applications.
               </p> */}
               <p className="text-justify md:text-lg text-sm leading-7">
-                The International Conference on Technology Integration for Global Development (ICTIGD) is an interdisciplinary platform aimed at advancing global development through innovative technological solutions. This prestigious event brings together visionaries, researchers, professionals, and academicians from across the globe to collaborate, share knowledge, and explore emerging technologies that can solve real-world challenges and promote sustainable growth.              </p>
+                The International Conference on Technology Integration for Global Development is an interdisciplinary platform aimed at advancing global development through innovative technological solutions. This prestigious event brings together visionaries, researchers, professionals, and academicians from across the globe to collaborate, share knowledge, and explore emerging technologies that can solve real-world challenges and promote sustainable growth.              </p>
             </div>
           </div>
         </section>
