@@ -7,8 +7,6 @@ import Other from '../Other/Other';
 function Abstracting() {
     const [uploadFile, setUploadFile] = useState(null);
     const [status, setStatus] = useState('');
-
-
     const [formData, setFormData] = useState({
         Paper_Title: '',
         Author_FUll_Name: '',
