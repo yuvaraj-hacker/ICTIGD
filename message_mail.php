@@ -1,20 +1,21 @@
 <?php
+// Enable error reporting for debugging
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-error_log("POST data: " . print_r($_POST, true));
-error_log("FILES data: " . print_r($_FILES, true));
-
+// Allow CORS if needed
 require 'cors.php';
 
+// Load PHPMailer
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 
 require_once realpath(__DIR__ . "/vendor/autoload.php");
 
-$required_fields = ['name', 'email', 'number', 'message',];
+// Validate required fields
+$required_fields = ['firstname',   'email', 'number', 'message'];
 $missing_fields = [];
 
 foreach ($required_fields as $field) {
@@ -31,96 +32,98 @@ if (!empty($missing_fields)) {
 $mail = new PHPMailer(true);
 
 try {
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;
-    $mail->Debugoutput = function ($str, $level) {
-        error_log("PHPMailer Debug: $str");
-    };
-
+    // SMTP configuration
+    $mail->SMTPDebug = SMTP::DEBUG_OFF;
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
     $mail->Username   = 'info.ictigd@gmail.com';
-    $mail->Password   = 'pkml unyw xite ndox';
+    $mail->Password   = 'pkml unyw xite ndox'; // App Password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
 
-    $mail->setFrom('info.ictigd@gmail.com', 'Enquiry');
-    $mail->addAddress('info.ictigd@gmail.com', 'Enquiry');
-
-    $mail->addReplyTo($_POST['email'], $_POST['name']);
-
-    $file_attached = false;
-    if (isset($_FILES['paper']) && $_FILES['paper']['error'] == UPLOAD_ERR_OK) {
-        $uploadedFile = $_FILES['paper'];
-
-        if ($uploadedFile['size'] > 10 * 1024 * 1024) {
-            throw new Exception("File size too large. Maximum 10MB allowed.");
-        }
-
-        $allowed_types = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
-        $file_type = mime_content_type($uploadedFile['tmp_name']);
-
-        if (!in_array($file_type, $allowed_types)) {
-            throw new Exception("Invalid file type. Only PDF and Word documents are allowed.");
-        }
-
-        $mail->addAttachment($uploadedFile['tmp_name'], $uploadedFile['name']);
-        $file_attached = true;
-        error_log("File attached: " . $uploadedFile['name']);
-    } else if (isset($_FILES['paper'])) {
-        error_log("File upload error: " . $_FILES['paper']['error']);
-    }
-
+    // Email setup to admin
+    $mail->setFrom('info.ictigd@gmail.com', 'ICTIGD Enquiry');
+    $mail->addAddress('info.ictigd@gmail.com', 'ICTIGD Enquiry');
+    $mail->addReplyTo($_POST['email'], $_POST['firstname']    );
     $mail->isHTML(true);
-    $mail->Subject = 'Enquiry';
+    $mail->Subject = 'New Contact Form Submission';
+
     $mail->Body = '
         <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px;">
             <h2 style="color: #0B4F8E; border-bottom: 2px solid #287B86; padding-bottom: 10px;">New Enquiry</h2>
-              <table style="width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 15px;">
-        <tr>
-            <td style="padding: 12px 15px; border: 1px solid #dee2e6; font-weight: 600;">Name</td>
-            <td style="padding: 12px 15px; border: 1px solid #dee2e6;">' . htmlspecialchars($_POST['name']) . '</td>
-        </tr>
-        <tr style="background-color: #f0f4f7;">
-            <td style="padding: 12px 15px; border: 1px solid #dee2e6; font-weight: 600;">Mobile Number</td>
-            <td style="padding: 12px 15px; border: 1px solid #dee2e6;">' . htmlspecialchars($_POST['number']) . '</td>
-        </tr>
-        <tr>
-            <td style="padding: 12px 15px; border: 1px solid #dee2e6; font-weight: 600;">Email Address</td>
-            <td style="padding: 12px 15px; border: 1px solid #dee2e6;">' . htmlspecialchars($_POST['email']) . '</td>
-        </tr>
-        <tr style="background-color: #f0f4f7;">
-            <td style="padding: 12px 15px; border: 1px solid #dee2e6; font-weight: 600;">Message</td>
-            <td style="padding: 12px 15px; border: 1px solid #dee2e6;">' . htmlspecialchars($_POST['message']) . '</td>
-        </tr>
-    </table>
+            <table style="width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 15px;">
+                <tr>
+                    <td style="padding: 12px 15px; border: 1px solid #dee2e6; font-weight: 600;">Name</td>
+                    <td style="padding: 12px 15px; border: 1px solid #dee2e6;">' .
+                        htmlspecialchars($_POST['firstname']) .  '</td>
+                </tr>
+                <tr style="background-color: #f0f4f7;">
+                    <td style="padding: 12px 15px; border: 1px solid #dee2e6; font-weight: 600;">Phone Number</td>
+                    <td style="padding: 12px 15px; border: 1px solid #dee2e6;">' .
+                        htmlspecialchars($_POST['number']) . '</td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px 15px; border: 1px solid #dee2e6; font-weight: 600;">Email</td>
+                    <td style="padding: 12px 15px; border: 1px solid #dee2e6;">' .
+                        htmlspecialchars($_POST['email']) . '</td>
+                </tr>
+                <tr style="background-color: #f0f4f7;">
+                    <td style="padding: 12px 15px; border: 1px solid #dee2e6; font-weight: 600;">Message</td>
+                    <td style="padding: 12px 15px; border: 1px solid #dee2e6;">' .
+                        nl2br(htmlspecialchars($_POST['message'])) . '</td>
+                </tr>
+            </table>
             <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666;">
-                <p>Enquiry Time: ' . date('Y-m-d H:i:s') . '</p>
+                <p>Submitted at: ' . date('Y-m-d H:i:s') . '</p>
             </div>
         </div>
     ';
 
     $mail->AltBody = "Enquiry\n\n" .
-        "Name: " . $_POST['name'] . "\n" .
-        "Mobile Number: " . $_POST['number'] . "\n" .
-        "Email Address: " . $_POST['email'] . "\n" .
-        "Message: " . $_POST['message'] . "\n" .
+        "Name: " . $_POST['firstname'] .  "\n" .
+        "Email: " . $_POST['email'] . "\n" .
+        "Phone: " . $_POST['number'] . "\n" .
+        "Message: " . $_POST['message'];
 
-        error_log("Attempting to send email...");
-    $result = $mail->send();
-    error_log("Email send result: " . ($result ? "SUCCESS" : "FAILED"));
+    // Send mail to admin
+    $mail->send();
 
-    if ($result) {
-        echo 'sent successfully!';
-    } else {
-        echo 'Email sending failed but no exception thrown.';
-    }
+    // Auto-reply to user
+    $replyMail = new PHPMailer(true);
+    $replyMail->isSMTP();
+    $replyMail->Host       = 'smtp.gmail.com';
+    $replyMail->SMTPAuth   = true;
+    $replyMail->Username   = 'info.ictigd@gmail.com';
+    $replyMail->Password   = 'pkml unyw xite ndox';
+    $replyMail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $replyMail->Port       = 587;
+
+    $replyMail->setFrom('info.ictigd@gmail.com', 'ICTIGD Team');
+    $replyMail->addAddress($_POST['email'], $_POST['firstname']);
+    $replyMail->isHTML(true);
+    $replyMail->Subject = 'Thank you for your enquiry - ICTIGD 2025';
+
+    $replyMail->Body = '
+        <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+            <h3 style="color: #287B86;">Dear ' . htmlspecialchars($_POST['firstname']) . ',</h3>
+            <p>Thank you for contacting us. We have received your message and our team will get back to you shortly.</p>
+            <p><strong>Your Submission Summary:</strong></p>
+            <ul>
+                <li><strong>Name:</strong> ' . htmlspecialchars($_POST['firstname']) .  '</li>
+                <li><strong>Email:</strong> ' . htmlspecialchars($_POST['email']) . '</li>
+                <li><strong>Phone:</strong> ' . htmlspecialchars($_POST['number']) . '</li>
+                <li><strong>Message:</strong> ' . nl2br(htmlspecialchars($_POST['message'])) . '</li>
+            </ul>
+            <p>Warm regards,<br>ICTIGD 2025 Team</p>
+        </div>
+    ';
+
+    $replyMail->AltBody = "Thank you " . $_POST['firstname'] . " for contacting us.\n\nWe have received your enquiry and will get back to you soon.\n\n- ICTIGD 2025 Team";
+
+    $replyMail->send();
+
+    echo 'sent successfully!';
 } catch (Exception $e) {
-    error_log("PHPMailer Exception: " . $e->getMessage());
-    error_log("Full error info: " . $mail->ErrorInfo);
-
     echo "Submission could not be sent. Error: " . $e->getMessage();
-    if ($mail->ErrorInfo) {
-        echo "\nMailer Info: " . $mail->ErrorInfo;
-    }
 }

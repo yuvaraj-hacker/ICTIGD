@@ -6,7 +6,7 @@ import Other from '../Other/Other';
 
 function Contact() {
 
-    const [formData, setFormData] = useState({ name: "", email: "", number: "", message: "" });
+    const [formData, setFormData] = useState({ firstname: "", email: "", number: "", message: "" });
     const [status, setStatus] = useState('');
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -16,11 +16,11 @@ function Contact() {
         setStatus('Sending...');
         try {
             const formDataToSend = new FormData();
-            formDataToSend.append('name', formData.name);
+            formDataToSend.append('firstname', formData.firstname);
             formDataToSend.append('email', formData.email);
             formDataToSend.append('number', formData.number);
             formDataToSend.append('message', formData.message);
-            const response = await fetch('http://192.168.29.174/iciscm/message_mail.php', {
+            const response = await fetch('https://ictigd.com/api/message_mail.php', {
                 method: 'POST',
                 body: formDataToSend,
             });
@@ -29,12 +29,12 @@ function Contact() {
                 const result = await response.text();
                 setStatus(result);
                 setFormData({
-                    name: '',
+                    firstname: '',
                     email: '',
                     number: '',
                     message: '',
                 });
-                toast.success("Paper submitted successfully!");
+                toast.success("submitted successfully!");
                 console.log("success")
             } else {
                 setStatus('Failed to send submission. Please try again.');
@@ -68,11 +68,11 @@ function Contact() {
                                             clipPath: 'polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px))',
                                         }} ngNativeValidate>
                                         <div className="">
-                                            <label for="email" className="block mb-2 text-sm mt-4   ">
+                                            <label for="firstname" className="block mb-2 text-sm mt-4   ">
                                                 Name
                                             </label>
-                                            <input type="text" name="name" id="name"
-                                                value={formData.name}
+                                            <input type="text" name="firstname" id="firstname"
+                                                value={formData.firstname}
                                                 onChange={handleChange}
                                                 ngModel className="shadow-sm   border text-sm    border-gray-300  focus:outline-none bg-white text-black focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5  mt-4" placeholder="Enter Your Name" required />
                                         </div>

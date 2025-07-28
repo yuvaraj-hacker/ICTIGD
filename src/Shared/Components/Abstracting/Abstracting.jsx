@@ -5,70 +5,125 @@ import { toast } from 'react-toastify';
 import Other from '../Other/Other';
 
 function Abstracting() {
-    const [formData, setFormData] = useState({ paperTitle: "", name: "", email: "", number: "", institution: "", paper: null, Paper_Track: "" });
     const [uploadFile, setUploadFile] = useState(null);
     const [status, setStatus] = useState('');
 
-    const handleRemoveFile = () => {
-        setUploadFile(null);
-        document.getElementById("upload-paper").value = ""; // Clear input
-    };
 
-    const handleChange = (e) => {
-        if (e.target.type === 'file') {
-            const file = e.target.files[0];
-            const maxSize = 10 * 1024 * 1024; // 10 MB in bytes
-            if (file && file.size > maxSize) {
-                alert("File size exceeds 10 MB. Please upload a smaller file.");
-                e.target.value = ""; // Clear the file input
-                return;
-            }
-            setFormData({ ...formData, [e.target.name]: file });
+    const [formData, setFormData] = useState({
+        Paper_Title: '',
+        Author_FUll_Name: '',
+        Email_Address: '',
+        Institution_Name: '',
+        Paper_Track: '',
+        Paper_File: null,
+    });
+    const [fileName, setFileName] = useState('Choose Your File');
+    const handleFileInputChange = (e) => {
+        const { name, type, files, value } = e.target;
+        if (files && files.length > 0) {
+            setFileName(files[0].name); // update UI
+            setFormData((prev) => ({
+                ...prev,
+                [name]: files[0], // update actual form data
+            }));
         } else {
-            setFormData({ ...formData, [e.target.name]: e.target.value });
+            setFormData((prev) => ({
+                ...prev,
+                [name]: value,
+            }));
         }
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus('Sending...');
+        const journalName = 'ictigd';
+        // Generate unique ID: journalName + YYYYMMDD + HHMMSS
+        const now = new Date();
+        const dateStr = now.toISOString().slice(0, 10).replace(/-/g, ''); // YYYYMMDD
+        const timeStr = now.toTimeString().slice(0, 8).replace(/:/g, ''); // HHMMSS
+        const uniqueId = `${journalName}_${dateStr}_${timeStr}`;
         try {
             const formDataToSend = new FormData();
-            formDataToSend.append('paperTitle', formData.paperTitle);
-            formDataToSend.append('name', formData.name);
-            formDataToSend.append('email', formData.email);
-            formDataToSend.append('number', formData.number);
-            formDataToSend.append('institution', formData.institution);
+            formDataToSend.append('Submission_ID', uniqueId);
+            formDataToSend.append('Paper_Title', formData.Paper_Title);
+            formDataToSend.append('Author_FUll_Name', formData.Author_FUll_Name);
+            formDataToSend.append('Email_Address', formData.Email_Address);
+            formDataToSend.append('Institution_Name', formData.Institution_Name);
             formDataToSend.append('Paper_Track', formData.Paper_Track);
-            if (formData.paper) {
-                formDataToSend.append('paper', formData.paper);
+
+            if (formData.Paper_File) {
+                formDataToSend.append('Paper_File', formData.Paper_File);
             }
-            const response = await fetch('http://192.168.29.174/iciscm/send_mail.php', { method: 'POST', body: formDataToSend, });
-            if (response.ok) {
-                const result = await response.text();
-                setStatus(result);
+
+            const googleSheetsParams = new URLSearchParams();
+            googleSheetsParams.append('Submission_ID', uniqueId);
+            googleSheetsParams.append('journal_name', journalName);
+            googleSheetsParams.append('Paper_Title', formData.Paper_Title);
+            googleSheetsParams.append('Author_FUll_Name', formData.Author_FUll_Name);
+            googleSheetsParams.append('Email_Address', formData.Email_Address);
+            googleSheetsParams.append('Institution_Name', formData.Institution_Name);
+            googleSheetsParams.append('Paper_Track', formData.Paper_Track);
+
+            const mailPromise = fetch('https://ictigd.com/api/send_mail.php', {
+                method: 'POST',
+                body: formDataToSend,
+            });
+
+            const sheetsPromise = fetch('https://script.google.com/macros/s/AKfycbwZ_TtKUqAfcue9TNCKy57hTrCKDUP5dTQnWbpSxBDzlRMllEuOoaxzRDl0kQPah5pZ/exec', {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: googleSheetsParams.toString(),
+            });
+
+            const [mailResponse, sheetsResponse] = await Promise.allSettled([mailPromise, sheetsPromise]);
+            const mailSuccess = mailResponse.status === 'fulfilled' && mailResponse.value.ok;
+            const sheetsSuccess = sheetsResponse.status === 'fulfilled';
+            if (sheetsResponse.status === 'rejected') {
+                console.error('Sheets request failed:', sheetsResponse.reason);
+            }
+
+            if (mailSuccess && sheetsSuccess) {
+                setStatus(`Submission successful! Data sent to both email and Google Sheets (${journalName}). Submission ID: ${uniqueId}`);
+
                 setFormData({
-                    paperTitle: '',
-                    name: '',
-                    email: '',
-                    number: '',
-                    institution: '',
-                    paper: null,
-                    Paper_Track: ''
+                    Paper_Title: '',
+                    Author_FUll_Name: '',
+                    Email_Address: '',
+                    Institution_Name: '',
+                    Paper_Track: '',
+                    Paper_File: null,
                 });
-                document.getElementById('paper').value = '';
-                toast.success("Paper submitted successfully!");
-                console.log("success")
+                const fileInput = document.getElementById('Paper_File');
+                if (fileInput) {
+                    fileInput.value = '';
+                } else {
+                    console.error('Element with ID "Paper_File" not found.');
+                }
+                toast.success(`Paper submitted successfully! Submission ID: ${uniqueId}`);
+
+            } else if (mailSuccess && !sheetsSuccess) {
+                setStatus('Email sent successfully, but there might be an issue with Google Sheets.');
+                toast.warning('Email sent successfully. Please check if data was saved to Google Sheets.');
+
+            } else if (!mailSuccess && sheetsSuccess) {
+                setStatus('Data likely saved to Google Sheets, but failed to send email.');
+                toast.warning('Data might be saved to Google Sheets, but failed to send email.');
+
             } else {
-                setStatus('Failed to send submission. Please try again.');
-                toast.error('Failed to send submission. Please try again.');
+                setStatus('There might be issues with the submission. Please check manually.');
+                toast.error('Submission completed, but please verify the results manually.');
             }
+
         } catch (error) {
             console.error('Error:', error);
-            setStatus('An error occurred. Please try again.');
+            setStatus('An error occurred during submission. Please try again.');
             toast.error('An error occurred. Please try again.');
         }
-    };
+    }
     return (
         <>
             <Other Title="Paper Submission" />
@@ -178,45 +233,45 @@ function Abstracting() {
                                         }} className=" mx-auto max-w-screen-xl  bg-gradient-to-tr shadow-xl   from-[#f0f4ff] to-[#e2ecfc]  md:p-6   p-3 ">
                                             <form className="w-full   grid lg:grid-cols-2 grid-cols-1 md:gap-5" ngNativeValidate onSubmit={handleSubmit}>
                                                 <div className=' '>
-                                                    <label for="paperTitle" className="block mb-2 text-sm text-[#1B1F3B mt-4 ">
+                                                    <label for="Paper_Title" className="block mb-2 text-sm text-[#1B1F3B mt-4 ">
                                                         Paper Title
                                                     </label>
-                                                    <input type="text" ngModel id="paperTitle" name="paperTitle" value={formData.paperTitle} onChange={handleChange} className="shadow-sm bg-white    text-black       border text-sm    border-gray-200  focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5   mt-4" placeholder="Enter the Paper Title" required />
+                                                    <input type="text" ngModel id="Paper_Title" name="Paper_Title" value={formData.Paper_Title} onChange={handleFileInputChange} className="shadow-sm bg-white    text-black       border text-sm    border-gray-200  focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5   mt-4" placeholder="Enter the Paper Title" required />
                                                 </div>
                                                 <div>
-                                                    <label for="name" className="block mb-2 text-sm text-[#1B1F3B] mt-4">
+                                                    <label for="Author_FUll_Name" className="block mb-2 text-sm text-[#1B1F3B] mt-4">
                                                         Name
                                                     </label>
-                                                    <input type="text" name="name" id="name" ngModel value={formData.name} onChange={handleChange} className="shadow-sm bg-white   border      border-gray-200  text-black text-sm   focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5   mt-4        "
+                                                    <input type="text" name="Author_FUll_Name" id="Author_FUll_Name" ngModel value={formData.Author_FUll_Name} onChange={handleFileInputChange} className="shadow-sm bg-white   border      border-gray-200  text-black text-sm   focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5   mt-4        "
                                                         placeholder="Enter Your Name" required />
                                                 </div>
                                                 <div>
-                                                    <label for="email" className="block mb-2 text-sm   text-[#1B1F3B]   mt-4  ">
+                                                    <label for="Email_Address" className="block mb-2 text-sm   text-[#1B1F3B]   mt-4  ">
                                                         Email
                                                     </label>
-                                                    <input type="email" name="email" id="email" value={formData.email} ngModel onChange={handleChange} className="shadow-sm bg-white   border     border-gray-200  text-black text-sm   focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5   mt-4 "
+                                                    <input type="Email_Address" name="Email_Address" id="Email_Address" value={formData.Email_Address} ngModel onChange={handleFileInputChange} className="shadow-sm bg-white   border     border-gray-200  text-black text-sm   focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5   mt-4 "
                                                         placeholder="name@gmail.com" required />
                                                 </div>
                                                 <div>
                                                     <label for="number" className="block mb-2 text-sm   text-[#1B1F3B]   mt-4 "  >
                                                         Contact Number
                                                     </label>
-                                                    <input type="text" name="number" id="number" value={formData.number} ngModel onChange={handleChange} className="shadow-sm bg-white    border      border-gray-200  text-black text-sm   focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5   mt-4  "
+                                                    <input type="text" name="number" id="number" value={formData.number} ngModel onChange={handleFileInputChange} className="shadow-sm bg-white    border      border-gray-200  text-black text-sm   focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5   mt-4  "
                                                         placeholder="Enter Your Mobile Number" required
                                                     />
                                                 </div>
                                                 <div>
-                                                    <label for="institution" className="block mb-2 text-sm   text-[#1B1F3B] mt-4 " >
+                                                    <label for="Institution_Name" className="block mb-2 text-sm   text-[#1B1F3B] mt-4 " >
                                                         Institution Name
                                                     </label>
-                                                    <input type="text" name="institution" id="institution" value={formData.institution} ngModel onChange={handleChange} className="shadow-sm  bg-white      border-gray-200 border  text-black text-sm   focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 mt-4" placeholder="Enter Your Institute" required />
+                                                    <input type="text" name="Institution_Name" id="Institution_Name" value={formData.Institution_Name} ngModel onChange={handleFileInputChange} className="shadow-sm  bg-white      border-gray-200 border  text-black text-sm   focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 mt-4" placeholder="Enter Your Institute" required />
                                                 </div>
                                                 <div>
-                                                    <label for="institution" className="block mb-2 text-sm text-[#1B1F3B] mt-4 " >
+                                                    <label for="Paper_Track" className="block mb-2 text-sm text-[#1B1F3B] mt-4 " >
                                                         Paper Track
                                                     </label>
                                                     <select name="Paper_Track" id="Paper_Track" value={formData.Paper_Track || ""}
-                                                        onChange={handleChange}
+                                                        onChange={handleFileInputChange}
                                                         required
                                                         className="shadow-sm bg-white border   border-gray-200 p-2.5 text-black text-sm focus:ring-primary-500 focus:border-primary-500 block w-full   mt-4"                                                >
                                                         <option value="">Select Track</option>
@@ -239,17 +294,17 @@ function Abstracting() {
                                                 </div>
                                                 <div className="md:col-span-2 mt-5">
                                                     <label className="block mb-2 text-sm text-[#1B1F3B]">Upload Paper</label>
-                                                    <input type="file" id="paper" name="paper" onChange={handleChange} accept=".pdf,.doc,.docx" required className="w-full p-2   border text-sm    border-gray-200 ring-1 ring-transparent bg-white focus:ring-[#0B4F8E] focus:outline-none" />
+                                                    <input type="file" id="paper" name="paper" onChange={handleFileInputChange} accept=".pdf,.doc,.docx" required className="w-full p-2   border text-sm    border-gray-200 ring-1 ring-transparent bg-white focus:ring-[#0B4F8E] focus:outline-none" />
                                                     <p className=" text-xs mt-3">* Maximum File Size: 10 MB</p>
                                                 </div>
-                                                {uploadFile && (
+                                                {/* {uploadFile && (
                                                     <div className="mt-4 bg-white p-3 rounded shadow flex justify-between items-center">
                                                         <div className="text-sm text-gray-800 truncate w-full pr-4">{uploadFile.name}</div>
                                                         <button onClick={handleRemoveFile} className="text-red-500 hover:text-red-700 transition cursor-pointer" title="Remove file"   >
                                                             ✕
                                                         </button>
                                                     </div>
-                                                )}
+                                                )} */}
                                                 <div className="text-center mx-auto mt-5  md:col-span-2">
                                                     <button type="submit" disabled={status === 'Sending...'}
                                                         className="py-3 px-5 text-sm  bg-primary-blue-color  text-center   hover:bg-[#f0f4ff] duration-300    shadow-lg    bg-white cursor-pointer font-semibold hover:text-primary-blue-color   text-[#014BBD]   bg-primary-red-color sm:w-fit hover:bg-primary-800  focus:outline-none  " >
