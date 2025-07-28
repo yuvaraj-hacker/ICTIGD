@@ -101,7 +101,7 @@ function Abstracting() {
                 } else {
                     console.error('Element with ID "Paper_File" not found.');
                 }
-                toast.success(`Paper submitted successfully! Submission ID: ${uniqueId}`);
+                toast.success(`Paper submitted successfully!`);
 
             } else if (mailSuccess && !sheetsSuccess) {
                 setStatus('Email sent successfully, but there might be an issue with Google Sheets.');
@@ -273,20 +273,20 @@ function Abstracting() {
                                                         required
                                                         className="shadow-sm bg-white border   border-gray-200 p-2.5 text-black text-sm focus:ring-primary-500 focus:border-primary-500 block w-full   mt-4"                                                >
                                                         <option value="">Select Track</option>
-                                                        <option value="TechForDevelopment">Technology for Sustainable Development</option>
-                                                        <option value="SmartInfrastructure">Smart Infrastructure and Urban Innovation</option>
-                                                        <option value="AI4Good">Artificial Intelligence for Social Impact</option>
-                                                        <option value="DigitalHealth">Digital Health and Telemedicine</option>
-                                                        <option value="EdTech">Technology in Education and Learning</option>
-                                                        <option value="GreenTech">Green Technologies and Renewable Energy</option>
-                                                        <option value="IoTandSensors">IoT and Remote Sensing for Development</option>
-                                                        <option value="Data4Development">Big Data and Data-Driven Governance</option>
-                                                        <option value="CyberPolicy">Cybersecurity, Ethics, and Digital Policy</option>
-                                                        <option value="Automation4Industry">Automation, Robotics, and Industry 4.0</option>
-                                                        <option value="BlockchainTransparency">Blockchain for Transparency and Aid Management</option>
-                                                        <option value="AIinAgriculture">AI and Smart Technologies in Agriculture</option>
-                                                        <option value="ClimateTech">Climate Tech and Environmental Monitoring</option>
-                                                        <option value="SmartCommunities">Smart Villages and Connected Communities</option>
+                                                        <option  >Technology for Sustainable Development</option>
+                                                        <option  >Smart Infrastructure and Urban Innovation</option>
+                                                        <option  >Artificial Intelligence for Social Impact</option>
+                                                        <option  >Digital Health and Telemedicine</option>
+                                                        <option  >Technology in Education and Learning</option>
+                                                        <option  >Green Technologies and Renewable Energy</option>
+                                                        <option  >IoT and Remote Sensing for Development</option>
+                                                        <option  >Big Data and Data-Driven Governance</option>
+                                                        <option  >Cybersecurity, Ethics, and Digital Policy</option>
+                                                        <option  >Automation, Robotics, and Industry 4.0</option>
+                                                        <option  >Blockchain for Transparency and Aid Management</option>
+                                                        <option  >AI and Smart Technologies in Agriculture</option>
+                                                        <option  >Climate Tech and Environmental Monitoring</option>
+                                                        <option  >Smart Villages and Connected Communities</option>
 
                                                     </select>
                                                 </div>
