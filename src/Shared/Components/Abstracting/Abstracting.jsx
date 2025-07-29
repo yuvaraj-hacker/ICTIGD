@@ -63,7 +63,7 @@ function Abstracting() {
             googleSheetsParams.append('Institution_Name', formData.Institution_Name);
             googleSheetsParams.append('Paper_Track', formData.Paper_Track);
 
-            const mailPromise = fetch('https://ictigd.com/api/send_mail.php', {
+            const mailPromise = fetch('https://ictigd.com/api/send_mail.PHP', {
                 method: 'POST',
                 body: formDataToSend,
             });
@@ -95,6 +95,7 @@ function Abstracting() {
                     Paper_Track: '',
                     Paper_File: null,
                 });
+                setFileName('');
                 const fileInput = document.getElementById('Paper_File');
                 if (fileInput) {
                     fileInput.value = '';
@@ -268,7 +269,7 @@ function Abstracting() {
                                                     <label for="Paper_Track" className="block mb-2 text-sm text-[#1B1F3B] mt-4 " >
                                                         Paper Track
                                                     </label>
-                                                    <select name="Paper_Track" id="Paper_Track" value={formData.Paper_Track || ""}
+                                                    <select  name="Paper_Track" id="Paper_Track" value={formData.Paper_Track || ""}
                                                         onChange={handleFileInputChange}
                                                         required
                                                         className="shadow-sm bg-white border   border-gray-200 p-2.5 text-black text-sm focus:ring-primary-500 focus:border-primary-500 block w-full   mt-4"                                                >
@@ -292,7 +293,7 @@ function Abstracting() {
                                                 </div>
                                                 <div className="md:col-span-2 mt-5">
                                                     <label className="block mb-2 text-sm text-[#1B1F3B]">Upload Paper</label>
-                                                    <input type="file" id="paper" name="paper" onChange={handleFileInputChange} accept=".pdf,.doc,.docx" required className="w-full p-2   border text-sm    border-gray-200 ring-1 ring-transparent bg-white focus:ring-[#0B4F8E] focus:outline-none" />
+                                                    <input type="file" id="Paper_File" name="Paper_File" onChange={handleFileInputChange} accept=".pdf,.doc,.docx" required className="w-full p-2   border text-sm    border-gray-200 ring-1 ring-transparent bg-white focus:ring-[#0B4F8E] focus:outline-none" />
                                                     <p className=" text-xs mt-3">* Maximum File Size: 10 MB</p>
                                                 </div>
                                                 {/* {uploadFile && (

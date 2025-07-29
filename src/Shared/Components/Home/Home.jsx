@@ -209,7 +209,7 @@ export const Home = () => {
                 Reach Us
               </h1>
               <div className=" w-full">
-                <form onSubmit={handleSubmit} className="w-full grid lg:grid-cols-2 gap-5 bg-[#1B1F3B] p-5  " style={{ clipPath: 'polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px))', }} ngNativeValidate>
+                <form onSubmit={handleSubmit} className="w-full grid lg:grid-cols-1 gap-5 bg-[#1B1F3B] p-5  " style={{ clipPath: 'polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px))', }} ngNativeValidate>
                   <div className="">
                     <label for="firstname" className="block mb-2 text-sm mt-4 ">
                       Name
@@ -233,7 +233,7 @@ export const Home = () => {
                     <input type="text" name="number" id="number" onChange={handleChange} value={formData.number} ngModel className="shadow-sm bg-white text-black  border   border-gray-300    text-sm   focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5   mt-4  "
                       placeholder="Enter Your Mobile Number" required />
                   </div>
-                  <div className="lg:col-span-2 mt-4">
+                  <div className="lg:col-span-1 mt-4">
                     <label for="message" className="block mb-2 text-sm ">
                       Your Message
                     </label>
@@ -242,7 +242,7 @@ export const Home = () => {
                       className="block p-2.5 w-full text-sm shadow-sm border bg-white text-black   border-gray-300   focus:ring-primary-500 focus:border-primary-500   mt-4 "
                       placeholder="Leave a Message..." ></textarea>
                   </div>
-                  <div className="text-center md:mt-0 mt-5 lg:col-span-2">
+                  <div className="text-center md:mt-0 mt-5 lg:col-span-1">
                     <button type="submit" className="py-3 px-6    font-semibold   text-center  md:text-base text-sm shadow-xl   bg-white hover:bg-[#f0f4ff] duration-300  text-[#014BBD]  cursor-pointer     " >
                       {status === 'Sending...' ? 'Submitting...' : 'Send message'}
                     </button>
