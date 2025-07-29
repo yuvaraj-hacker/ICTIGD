@@ -288,7 +288,6 @@ function Abstracting() {
                                                         <option  >AI and Smart Technologies in Agriculture</option>
                                                         <option  >Climate Tech and Environmental Monitoring</option>
                                                         <option  >Smart Villages and Connected Communities</option>
-
                                                     </select>
                                                 </div>
                                                 <div className="md:col-span-2 mt-5">
