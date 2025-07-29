@@ -49,11 +49,7 @@ function Abstracting() {
             formDataToSend.append('Email_Address', formData.Email_Address);
             formDataToSend.append('Institution_Name', formData.Institution_Name);
             formDataToSend.append('Paper_Track', formData.Paper_Track);
-
-            if (formData.Paper_File) {
-                formDataToSend.append('Paper_File', formData.Paper_File);
-            }
-
+            if (formData.Paper_File) { formDataToSend.append('Paper_File', formData.Paper_File); }
             const googleSheetsParams = new URLSearchParams();
             googleSheetsParams.append('Submission_ID', uniqueId);
             googleSheetsParams.append('journal_name', journalName);
@@ -83,10 +79,8 @@ function Abstracting() {
             if (sheetsResponse.status === 'rejected') {
                 console.error('Sheets request failed:', sheetsResponse.reason);
             }
-
             if (mailSuccess && sheetsSuccess) {
                 setStatus(`Submission successful! Data sent to both email and Google Sheets (${journalName}). Submission ID: ${uniqueId}`);
-
                 setFormData({
                     Paper_Title: '',
                     Author_FUll_Name: '',
@@ -269,7 +263,7 @@ function Abstracting() {
                                                     <label for="Paper_Track" className="block mb-2 text-sm text-[#1B1F3B] mt-4 " >
                                                         Paper Track
                                                     </label>
-                                                    <select  name="Paper_Track" id="Paper_Track" value={formData.Paper_Track || ""}
+                                                    <select name="Paper_Track" id="Paper_Track" value={formData.Paper_Track || ""}
                                                         onChange={handleFileInputChange}
                                                         required
                                                         className="shadow-sm bg-white border   border-gray-200 p-2.5 text-black text-sm focus:ring-primary-500 focus:border-primary-500 block w-full   mt-4"                                                >

@@ -11,7 +11,7 @@ function Other({ Title }) {
                         <div className=" ">
                             <div className="absolute top-0 left-0 h-full w-full bg-gradient-to-b from-[#2487DB] to-[#014BBD] opacity-50 z-0 "></div>
                         </div>
-                        <p className=" md:px-0 px-3 relative md:text-4xl text-2xl text-white md:text-left text-center  font-bold">{Title}</p>
+                        <p className=" md:px-0 px-3 relative md:text-4xl text-2xl text-white md:text-left text-center font-bold">{Title}</p>
                     </div>
                 </section>
             </section>
