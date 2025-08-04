@@ -5,7 +5,7 @@ import HelmetComponent from '../Helmet/HelmetProvider'
 function AbstractingPage() {
     return (
         <>
-            {/* <HelmetComponent title="Paper Submission - International Conference on Intelligent Systems and Computational Methods" /> */}
+            <HelmetComponent title="Paper Submission - International Conference on Technology Integration for Global Development" canonical={'https://ictigd.com/paper-submission'} />
             <Abstracting />
         </>
     )

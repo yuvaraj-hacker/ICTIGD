@@ -13,7 +13,7 @@ function ArticleProcess() {
                                 </h1>
                             </div>
                             <p className="text-justify md:text-base text-sm">
-                                The International Conference on Intelligent Systems and Computational Methods follows a structured article processing workflow to ensure timely and high-quality publication of research articles.                            </p>
+                                The International Conference on Technology Integration for Global Development follows a structured article processing workflow to ensure timely and high-quality publication of research articles.                            </p>
                         </section>
 
                         <section className="flex flex-col gap-2">

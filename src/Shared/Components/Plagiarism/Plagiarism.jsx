@@ -13,7 +13,7 @@ function Plagiarism() {
                                 </h1>
                             </div>
                             <p className="text-justify md:text-base text-sm">
-                                The International Conference on Intelligent Systems and Computational Methods maintains a strict zero-tolerance policy against plagiarism. All submitted manuscripts undergo rigorous plagiarism screening to ensure academic integrity.
+                                The International Conference on Technology Integration for Global Development maintains a strict zero-tolerance policy against plagiarism. All submitted manuscripts undergo rigorous plagiarism screening to ensure academic integrity.
                             </p>                        </section>
 
                         <section className="flex flex-col gap-2">

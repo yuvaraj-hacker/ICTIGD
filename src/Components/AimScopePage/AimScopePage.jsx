@@ -5,7 +5,7 @@ import HelmetComponent from '../Helmet/HelmetProvider'
 function AimScopePage() {
     return (
         <>
-            {/* <HelmetComponent title="Scope - International Conference on Intelligent Systems and Computational Methods" /> */}
+            <HelmetComponent title="Scope - International Conference on Technology Integration for Global Development" canonical={'https://ictigd.com/scope'} />
             <AimandScope />
         </>
     )

@@ -40,7 +40,7 @@ function Copyrights() {
                                 </h1>
                             </div>
                             <p className="text-justify md:text-base text-sm">
-                                I/We ____________________________, the author(s) of the research paper/article entitled ______________________, hereby grant permission for the publication of the above-mentioned paper/article in International Conference on Intelligent Systems and Computational Methods.
+                                I/We ____________________________, the author(s) of the research paper/article entitled ______________________, hereby grant permission for the publication of the above-mentioned paper/article in International Conference on Technology Integration for Global Development.
                             </p>
                             <p className="text-justify md:text-base text-sm">
                                 <p className=""> It is agreed that :</p>

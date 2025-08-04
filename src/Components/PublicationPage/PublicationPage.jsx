@@ -5,7 +5,7 @@ import HelmetComponent from '../Helmet/HelmetProvider'
 function PublicationPage() {
     return (
         <>
-              {/* <HelmetComponent title="Key Dates - International Conference on Intelligent Systems and Computational Methods" /> */}
+            <HelmetComponent title="Key Dates - International Conference on Technology Integration for Global Development" canonical={'https://ictigd.com/key-dates'} />
             <Publication />
         </>
     )

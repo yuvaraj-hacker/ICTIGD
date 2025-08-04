@@ -13,7 +13,7 @@ function Guideline() {
                                 </h1>
                             </div>
                             <p className="text-justify md:text-base text-sm">
-                                The International Conference on Intelligent Systems and Computational Methods welcomes high-quality, original research contributions in the fields of robotics, automation, artificial intelligence, and related disciplines. Authors must adhere to the following guidelines when preparing and submitting their manuscripts.                            </p>
+                                The International Conference on Technology Integration for Global Development welcomes high-quality, original research contributions in the fields of robotics, automation, artificial intelligence, and related disciplines. Authors must adhere to the following guidelines when preparing and submitting their manuscripts.                            </p>
 
                         </section>
 
