@@ -52,7 +52,7 @@ function Abstracting() {
             if (formData.Paper_File) { formDataToSend.append('Paper_File', formData.Paper_File); }
             const googleSheetsParams = new URLSearchParams();
             googleSheetsParams.append('Submission_ID', uniqueId);
-            googleSheetsParams.append('journal_name', journalName);
+                       googleSheetsParams.append('journal_name', journalName);
             googleSheetsParams.append('Paper_Title', formData.Paper_Title);
             googleSheetsParams.append('Author_FUll_Name', formData.Author_FUll_Name);
             googleSheetsParams.append('Email_Address', formData.Email_Address);
